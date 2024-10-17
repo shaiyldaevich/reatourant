@@ -59,7 +59,7 @@ export const Typography: React.FC<TypographyProps> = (props) => {
 
   return (
     <TagName onClick={onClick} id={id} className={classNamedGenerated}>
-    {typeof truncate === 'number' ? truncateString(children as string, truncate) : children}
+      {typeof truncate === 'number' ? truncateString(children as string, truncate) : children}
     </TagName>
   );
 };
