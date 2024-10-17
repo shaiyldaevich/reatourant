@@ -1,9 +1,8 @@
 "use client";
-import { FC, ReactNode, useEffect, useState } from "react";
+import { FC, ReactNode } from "react";
 import Footer from "./footer/Footer";
 import Header from "./header/Header";
 import scss from "./Layout.module.scss";
-import { useGetProductQuery } from "@/redux/api/todo";
 
 interface LayoutType {
   children: ReactNode;
