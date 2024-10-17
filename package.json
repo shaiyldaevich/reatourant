@@ -17,7 +17,8 @@
     "react-hook-form": "^7.53.0",
     "react-redux": "^9.1.2",
     "redux": "^5.0.1",
-    "sass": "^1.79.5"
+    "sass": "^1.79.5",
+    "scss": "^0.2.4"
   },
   "devDependencies": {
     "@types/node": "^20.16.11",
