@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FaTelegramPlane, FaInstagram } from "react-icons/fa"; // Подключаем иконки для соцсетей
+import { FaTelegramPlane, FaInstagram } from "react-icons/fa"; 
 import scss from "./Footer.module.scss";
 const Links = [
   { name: "Interior", href: "/interior" },

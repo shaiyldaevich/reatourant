@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { CiSearch } from "react-icons/ci"; // Иконка поиска
+import { CiSearch } from "react-icons/ci"; 
 import scss from "./Header.module.scss";
 
 const Links = [
