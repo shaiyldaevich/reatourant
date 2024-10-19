@@ -1,0 +1,95 @@
+#menuPage {
+	padding-block: 97px;
+}
+.menuPage {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-evenly;
+}
+.menuContent {
+	width: 333px;
+	height: 355px;
+	background: #1f2731;
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		text-align: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		li {
+			width: 70%;
+			padding-block: 15px;
+			border-bottom: 1px solid rgba(134, 133, 133, 0.521);
+			font-family: Silk Serif;
+			font-size: 24px;
+			font-weight: 600;
+			color: rgb(194, 193, 193);
+			cursor: pointer;
+		}
+	}
+}
+.activeLi {
+	width: 100% !important;
+	background-color: #c20909;
+	color: rgb(255, 255, 255);
+}
+.menuBlocks {
+	width: 53%;
+}
+.productList {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	// display: grid;
+	// grid-template-columns: repeat(2, 1fr);
+	padding: 20px;
+	gap: 20px;
+}
+
+.productCard {
+	background-color: #f9f9f9;
+	border-radius: 10px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	text-align: center;
+	width: 329px;
+	object-fit: cover;
+	height: 250px;
+}
+.produtText {
+	color: black;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	h3 {
+		color: red;
+		font-size: 16px;
+		font-weight: 600;
+	}
+}
+.iceCream {
+	display: flex;
+	align-items: flex-start;
+	flex-direction: column;
+	gap: 5px;
+	h2 {
+		font-size: 20px;
+		font-weight: 600;
+		color: black;
+	}
+	p {
+		font-size: 14px;
+		font-weight: 500;
+		letter-spacing: 0.07em;
+		color: #939393;
+	}
+}
+.productImage {
+	width: 329px;
+	height: 187px;
+	border-radius: 5px;
+	object-fit: cover;
+}
