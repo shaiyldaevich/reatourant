@@ -1,10 +1,11 @@
 import React from "react";
-import styles  from './Banner.module.scss'
+import styles from "./Banner.module.scss";
 import { FaArrowRight } from "react-icons/fa";
 import IconBannerLeft from "@/assets/icons/IconBannerLeft";
 import IconBannerRight from "@/assets/icons/IconBannerRight";
 import Location from "@/assets/icons/Location";
 import Phone from "@/assets/icons/Phone";
+import { Typography } from "@/UI/Typography/Typography";
 interface Text {
   name: string;
   descr: string;
@@ -31,15 +32,18 @@ const Baner: React.FC = () => {
       <div className={styles.mainText}>
         <div className={styles.banerText}>
           <IconBannerLeft />
-          <h3>Delicious</h3>
+          <Typography variant="h2" weight="light" fontFamily="shalimar">
+            Delicious
+          </Typography>
           <IconBannerRight />
         </div>
-        <h1>{text.name}</h1>
+        <Typography variant="h1" weight="regular" fontFamily="playfair_display">{text.name}</Typography>
         <p>{text.descr}</p>
         <div className={styles.banerButton}>
           <hr className={styles.hrTop} />
           <button>
-            Reserve Your Table <FaArrowRight className={styles.arr} />
+            Reserve Your Table
+            <FaArrowRight className={styles.arr} />
           </button>
           <hr className={styles.hrBottom} />
         </div>
