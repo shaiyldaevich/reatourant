@@ -1,14 +1,14 @@
 import AboutUs from "./AboutUs/AboutUs";
+import Baner from "./Baner/Baner";
 import BestSeller from "./BestSeller/BestSeller";
-import Homepage from "./homeSection/HomePage";
 const HomePage = () => {
-    return (
-        <>
-            <Homepage />
-            <AboutUs />
-            <BestSeller />
-        </>
-    );
+  return (
+    <>
+      <Baner />
+      <AboutUs />
+      <BestSeller />
+    </>
+  );
 };
 
 export default HomePage;
