@@ -224,7 +224,27 @@
         font-size: 10px;
     }
 }
-@media (max-width: 1000px) {
+@media (max-width: 1001px) {
+    .InfoContent {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .ImgContent {
+        display: flex;
+        padding: 20px 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .ImgContentImg {
+        width: 408px;
+        height: 243px;
+    }
+}
+@media (max-width: 480px) {
     .InfoContent {
         display: flex;
         align-items: flex-start;
