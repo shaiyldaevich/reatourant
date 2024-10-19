@@ -8,7 +8,7 @@ const HomePage = () => {
       <Homepage />
       <AboutUs />
       <BestSeller />
-      {/* <Contact/> */}
+      <Contact/>
     </>
   );
 };

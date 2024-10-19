@@ -55,12 +55,13 @@ const Contact = () => {
             </div>
             <div className={scss.map}>
               <iframe
-                src="https://www.google.com/maps/@42.8868752,74.6061824,14z?entry=ttu&g_ep=EgoyMDI0MTAxNS4wIKXMDSoASAFQAw%3D%3D"
-                width="400"
-                height="200"
-                style={{ border: 0 }}
-                allowFullScreen
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83998.77824579958!2d2.2646349671527934!3d48.858938434575734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1f06e2b70f%3A0x40b82c3688c9460!2z0J_QsNGA0LjQtiwg0KTRgNCw0L3RhtC40Y8!5e0!3m2!1sru!2skg!4v1729316091447!5m2!1sru!2skg"
+                width="550"
+                height="250"
+                // style="border:0;"
+                // allowfullscreen=""
                 loading="lazy"
+                // referrerpolicy="no-referrer-when-downgrade"
               ></iframe>
             </div>
           </div>
