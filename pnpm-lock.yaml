@@ -600,14 +600,12 @@ packages:
     resolution: {integrity: sha512-n8enUVCED/KVRQlab1hr3MVpcVMvxtZjmEa956u+4YijlmQED223XMSYj2tLuKvr4jcCTzNNMpQDUer72MMmzA==}
     engines: {node: '>= 14.16.0'}
 
-<<<<<<< HEAD
   ci@2.3.0:
     resolution: {integrity: sha512-0MGXkzJKkwV3enG7RUxjJKdiAkbaZ7visCjitfpCN2BQjv02KGRMxCHLv4RPokkjJ4xR33FLMAXweS+aQ0pFSQ==}
     hasBin: true
-=======
+
   classnames@2.5.1:
     resolution: {integrity: sha512-saHYOzhIQs6wy2sVxTM6bUDsQO4F50V9RQ22qBpEdCW+I+/Wmke2HOl6lS6dTpdxVhb88/I6+Hs+438c3lfUow==}
->>>>>>> 59582ac073eec485fa985fd1571312e31f75d299
 
   client-only@0.0.1:
     resolution: {integrity: sha512-IV3Ou0jSMzZrd3pZ48nLkT9DA7Ag1pnPzaiQhpW7c3RbcqqzvzzVu+L8gfqMp/8IM2MQtSiqaCxrrcfu8I8rMA==}
@@ -2596,11 +2594,9 @@ snapshots:
     dependencies:
       readdirp: 4.0.2
 
-<<<<<<< HEAD
   ci@2.3.0: {}
-=======
+
   classnames@2.5.1: {}
->>>>>>> 59582ac073eec485fa985fd1571312e31f75d299
 
   client-only@0.0.1: {}
 

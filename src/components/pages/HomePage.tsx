@@ -1,14 +1,14 @@
 import AboutUs from "./AboutUs/AboutUs";
+import Banner from "./Banner/Banner";
 import BestSeller from "./BestSeller/BestSeller";
 import Contact from "./Contact/Contact";
-import Homepage from "./homeSection/HomePage";
 const HomePage = () => {
   return (
     <>
-      <Homepage />
+      <Banner />
       <AboutUs />
       <BestSeller />
-      <Contact/>
+      <Contact />
     </>
   );
 };
