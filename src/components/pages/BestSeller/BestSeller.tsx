@@ -57,7 +57,7 @@ const BestSeller: React.FC = () => {
 
     return (
         <section className={scss.BestSeller}>
-            <div className={scss.container}>
+            <div className="container">
                 <div className={scss.content}>
                     <div className={scss.info}>
                         <div className={scss.titleContent}>
