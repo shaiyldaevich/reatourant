@@ -8,7 +8,7 @@ import TextIcon from "../../../assets/icons/AboutUsIcon.png";
 const AboutUs = () => {
     return (
         <section className={scss.AboutUs}>
-            <div className={scss.container}>
+            <div className='container'>
                 <div className={scss.content}>
                     <div className={scss.titleContent}>
                         <Image
