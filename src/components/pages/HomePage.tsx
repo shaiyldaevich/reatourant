@@ -5,7 +5,7 @@ import Contact from "./Contact/Contact";
 const HomePage = () => {
     return (
         <>
-            {/* <Banner /> */}
+            <Banner />
             <AboutUs />
             <BestSeller />
             <Contact />
