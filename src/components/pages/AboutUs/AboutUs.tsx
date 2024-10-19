@@ -1,8 +1,8 @@
 import React from "react";
 import scss from "./AboutUs.module.scss";
 import Image from "next/image";
-// import img1 from "../../../assets/images/AboutUs (1).svg";
-// import img2 from "../../../assets/images/AboutUs (2).svg";
+import img1 from "../../../assets/images/AboutUs (1).svg";
+import img2 from "../../../assets/images/AboutUs (2).svg";
 import TextIcon from "../../../assets/icons/AboutUsIcon.png";
 
 const AboutUs = () => {
@@ -12,11 +12,10 @@ const AboutUs = () => {
                 <div className={scss.content}>
                     <div className={scss.titleContent}>
                         <Image
-                            width={55}
-                            height={20}
-                            quality={70}
+                            className={scss.titleContentImg}
+                            quality={100}
                             src={TextIcon}
-                            alt=""
+                            alt="asd"
                         />
                         <h1 className={scss.TitleContentTitle}> About Us</h1>
                     </div>
@@ -32,7 +31,20 @@ const AboutUs = () => {
                             a unique experience of taste discovery!
                         </h1>
                     </div>
-                    <div className={scss.ImgContent}></div>
+                    <div className={scss.ImgContent}>
+                        <Image
+                            quality={100}
+                            src={img1}
+                            className={scss.ImgContentImg}
+                            alt="img"
+                        />
+                        <Image
+                            quality={100}
+                            src={img2}
+                            className={scss.ImgContentImg}
+                            alt="img"
+                        />
+                    </div>
                 </div>
             </div>
         </section>
