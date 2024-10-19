@@ -1,11 +1,11 @@
-import React from 'react';
+import Menu from '@/components/pages/Menu/Menu'
 
 const page = () => {
-    return (
-        <div>
-            
-        </div>
-    );
-};
+	return (
+		<div>
+			<Menu />
+		</div>
+	)
+}
 
-export default page;
+export default page
