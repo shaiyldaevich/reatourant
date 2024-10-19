@@ -10,8 +10,8 @@
     justify-content: space-between;
 
     .logo {
-      font-size: 24px;
-      font-weight: bold;
+      font-size: clamp(14px, 4vw, 24px);
+      font-weight: 500;
     }
 
     .nav {
@@ -33,6 +33,12 @@
             &:hover {
               text-decoration: underline;
             }
+          }
+        }
+        @media (max-width: 620px) {
+          li {
+            // overflow: hidden;
+            display: none;
           }
         }
       }

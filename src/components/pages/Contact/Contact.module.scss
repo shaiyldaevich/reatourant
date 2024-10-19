@@ -1,0 +1,142 @@
+.Contact {
+  padding: 50px 0;
+
+  .content {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+
+  .text {
+    flex: 1;
+
+    h1 {
+      font-size: 36px;
+      color: #fff;
+      margin-bottom: 20px;
+      line-height: 1.3;
+    }
+
+    .neighborhood,
+    .opening {
+      margin-bottom: 20px;
+
+      h3 {
+        font-size: 20px;
+        color: #fff;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 16px;
+        color: #fff;
+        line-height: 1.5;
+      }
+    }
+
+    .btn {
+      margin-top: 30px;
+
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 4px;
+
+        &:hover {
+          background-color: #0056b3;
+        }
+      }
+    }
+  }
+
+  .map_div {
+    display: flex;
+    // align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #fd0303;
+    padding: 20px;
+    .map_text {
+      display: flex;
+      align-items: start;
+      justify-content: center;
+      flex-direction: column;
+      h3 {
+        font-size: 24px;
+        color: #fff;
+        margin-bottom: 15px;
+      }
+      a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #007bff;
+        font-size: 16px;
+        margin-bottom: 10px;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+
+        svg {
+          font-size: 24px;
+          color: #fff;
+        }
+
+        span {
+          font-size: 16px;
+          color: #fff;
+        }
+      }
+      .mess {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        a {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          color: #007bff;
+          font-size: 16px;
+          margin-bottom: 10px;
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    .map {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 400px;
+      height: 300px;
+      border-radius: 4px;
+
+      @media (max-width: 768px) {
+        width: 100%;
+        height: auto;
+      }
+
+      .gm-style {
+        iframe {
+          width: 100%;
+          height: 100%;
+          border: none;
+        }
+      }
+    }
+  }
+}
