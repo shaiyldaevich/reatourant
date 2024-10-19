@@ -59,13 +59,146 @@
     grid-template-columns: 1fr 1fr;
     align-items: center;
     justify-content: center;
-}
-
-.ImgContent {
     padding: 40px 0;
 }
 
 .ImgContentImg {
     width: 528px;
     height: 303px;
+}
+@media (max-width: 1470px) {
+    .ImgContentImg {
+        width: 508px;
+        height: 283px;
+    }
+}
+
+@media (max-width: 1430px) {
+    .ImgContentImg {
+        width: 488px;
+        height: 263px;
+    }
+    .TitleContentTitle {
+        font-size: 38px;
+    }
+    .InfoContentTitle {
+        width: 380px;
+        font-size: 38px;
+    }
+    .InfoContentInfo {
+        width: 400px;
+        font-size: 14px;
+    }
+    .InfoContent {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 1380px) {
+    .container {
+        padding: 0 180px;
+    }
+    .ImgContentImg {
+        width: 478px;
+        height: 253px;
+    }
+    .TitleContentTitle {
+        font-size: 37px;
+    }
+    .InfoContentTitle {
+        width: 370px;
+        font-size: 37px;
+    }
+    .InfoContentInfo {
+        width: 390px;
+        font-size: 13px;
+    }
+    .InfoContent {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 1330px) {
+    .ImgContentImg {
+        width: 478px;
+        height: 253px;
+    }
+    .TitleContentTitle {
+        font-size: 36px;
+    }
+    .InfoContentTitle {
+        width: 360px;
+        font-size: 36px;
+    }
+    .InfoContentInfo {
+        width: 380px;
+        font-size: 12px;
+    }
+    .InfoContent {
+        gap: 40px;
+    }
+    .titleContentImg {
+        width: 48px;
+        height: 12px;
+    }
+    .ImgContent {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .TitleContentTitle {
+        font-size: 35px;
+    }
+    .InfoContentTitle {
+        width: 350px;
+        font-size: 35px;
+    }
+    .InfoContentInfo {
+        width: 370px;
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 1230px) {
+    .container {
+        padding: 0 150px;
+    }
+
+    .TitleContentTitle {
+        font-size: 34px;
+    }
+    .InfoContentTitle {
+        width: 340px;
+        font-size: 34px;
+    }
+    .InfoContentInfo {
+        width: 360px;
+        font-size: 11px;
+    }
+}
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 120px;
+    }
+    .InfoContent {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .ImgContent {
+        display: flex;
+        padding: 20px 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .ImgContentImg {
+        width: 408px;
+        height: 243px;
+    }
 }

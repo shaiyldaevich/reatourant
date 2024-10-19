@@ -104,8 +104,7 @@ const BestSeller: React.FC = () => {
                                         <Image
                                             src={slide.image}
                                             alt={`Slide ${slide.id}`}
-                                            width={310}
-                                            height={300}
+                                            className={scss.sliderImg}
                                         />
                                     </div>
                                 ))}
