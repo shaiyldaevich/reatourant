@@ -181,14 +181,12 @@
         display: block;
       }
 
-      .gm-style {
-        iframe {
-          border: none;
-          filter: invert(100%);
-          @media (max-width: 600px) {
-            width: 300px;
-            height: 100px;
-          }
+      iframe {
+        border: none;
+        filter: invert(100%);
+        @media (max-width: 600px) {
+          width: 300px;
+          height: 100px;
         }
       }
     }
