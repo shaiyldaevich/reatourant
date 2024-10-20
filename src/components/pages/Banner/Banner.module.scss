@@ -1,0 +1,119 @@
+.mainBaner {
+  background: url("../../../assets/images/baner.png") no-repeat center/cover
+    fixed;
+  max-width: 100%;
+  max-height: 90%;
+  padding-top: 30px;
+  padding-left: 35px;
+  padding-bottom: 40px;
+  padding-right: 40px;
+
+  .mainText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 70vh;
+    .banerText {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    p {
+      color: rgb(255, 255, 255);
+      font-family: Spartan;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 18px;
+      letter-spacing: 0%;
+      text-align: center;
+      width: 22%;
+    }
+    .banerButton {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin-top: 31px;
+      gap: 8px;
+      .hrTop,
+      .hrBottom {
+        width: 169px;
+        box-sizing: border-box;
+        border: 1.4px solid rgb(239, 39, 44);
+      }
+      button {
+        width: 220px;
+        height: 42px;
+        border: 1.6px solid rgb(239, 39, 44);
+        background-color: rgba(0, 0, 0, 0);
+        color: rgb(255, 255, 255);
+        font-family: Spartan;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 13px;
+        letter-spacing: 0%;
+        text-transform: uppercase;
+        gap: 5px;
+        .arrow {
+          width: 8.41px;
+          color: white;
+        }
+      }
+    }
+  }
+
+  .mainInformation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 25px;
+    padding-left: 20px;
+    padding-right: 30px;
+
+    .location,
+    .phone {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      p {
+        color: rgb(255, 255, 255);
+        font-family: Spartan;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 16px;
+        letter-spacing: 0%;
+        text-align: left;
+        text-transform: capitalize;
+      }
+      .locationHr,
+      .phoneHr {
+        width: 56px;
+        height: 0;
+        border: 0.6px solid rgb(255, 255, 255);
+      }
+      h5 {
+        color: rgb(255, 255, 255);
+        font-family: Spartan;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 13px;
+        letter-spacing: 0%;
+        text-align: left;
+        text-transform: capitalize;
+      }
+    }
+  }
+  .BannerHrTop {
+    width: 20%;
+    border: 0.4px solid rgb(146, 138, 138);
+    margin-left: 1400px;
+  }
+
+  .BannerHrBotttom {
+    width: 100%;
+    border: 0.4px solid rgb(146, 138, 138);
+  }
+}

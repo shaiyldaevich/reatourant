@@ -1,9 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Shalimar&display=swap");
 
-.container {
-    padding: 0 200px;
-}
-
 .titleContent {
     display: flex;
     flex-direction: row;
@@ -21,7 +17,7 @@
 
 .InfoContentTitle {
     font-size: 40px;
-    width: 400px;
+    width: 380px;
     font-weight: 600;
     font-family: serif;
 }
@@ -51,6 +47,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
+    gap: 42px;
     justify-content: center;
 }
 
@@ -58,25 +55,20 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
+    gap: 42px;
     justify-content: center;
     padding: 40px 0;
 }
 
 .ImgContentImg {
-    width: 528px;
-    height: 303px;
-}
-@media (max-width: 1470px) {
-    .ImgContentImg {
-        width: 508px;
-        height: 283px;
-    }
+    width: 658px;
+    height: 380px;
 }
 
 @media (max-width: 1430px) {
     .ImgContentImg {
-        width: 488px;
-        height: 263px;
+        width: 657px;
+        height: 380px;
     }
     .TitleContentTitle {
         font-size: 38px;
@@ -86,7 +78,7 @@
         font-size: 38px;
     }
     .InfoContentInfo {
-        width: 400px;
+        width: 480px;
         font-size: 14px;
     }
     .InfoContent {
@@ -95,12 +87,9 @@
 }
 
 @media (max-width: 1380px) {
-    .container {
-        padding: 0 180px;
-    }
     .ImgContentImg {
-        width: 478px;
-        height: 253px;
+        width: 628px;
+        height: 353px;
     }
     .TitleContentTitle {
         font-size: 37px;
@@ -120,8 +109,8 @@
 
 @media (max-width: 1330px) {
     .ImgContentImg {
-        width: 478px;
-        height: 253px;
+        width: 608px;
+        height: 333px;
     }
     .TitleContentTitle {
         font-size: 36px;
@@ -163,8 +152,9 @@
 }
 
 @media (max-width: 1230px) {
-    .container {
-        padding: 0 150px;
+    .ImgContentImg {
+        width: 598px;
+        height: 323px;
     }
 
     .TitleContentTitle {
@@ -179,14 +169,75 @@
         font-size: 11px;
     }
 }
-@media (max-width: 1200px) {
-    .container {
-        padding: 0 120px;
+
+@media (max-width: 1180px) {
+    .ImgContentImg {
+        width: 578px;
+        height: 303px;
     }
+
+    .TitleContentTitle {
+        font-size: 33px;
+    }
+    .InfoContentTitle {
+        width: 310px;
+        font-size: 33px;
+    }
+    .InfoContentInfo {
+        width: 340px;
+        font-size: 10px;
+    }
+}
+@media (max-width: 1130px) {
+    .ImgContentImg {
+        width: 568px;
+        height: 293px;
+    }
+
+    .TitleContentTitle {
+        font-size: 32px;
+    }
+    .InfoContentTitle {
+        width: 300px;
+        font-size: 32px;
+    }
+    .InfoContentInfo {
+        width: 330px;
+        font-size: 10px;
+    }
+}
+@media (max-width: 1080px) {
+    .ImgContentImg {
+        width: 548px;
+        height: 273px;
+    }
+
+    .TitleContentTitle {
+        font-size: 32px;
+    }
+    .InfoContentTitle {
+        width: 280px;
+        font-size: 32px;
+    }
+    .InfoContentInfo {
+        width: 310px;
+        font-size: 10px;
+    }
+}
+@media (max-width: 1001px) {
     .InfoContent {
         display: flex;
         align-items: flex-start;
         flex-direction: column;
+    }
+
+    .InfoContent {
+        gap: 20px;
+    }
+
+    .content {
+        padding: 40px 0;
+        gap: 15px;
     }
 
     .ImgContent {
@@ -200,5 +251,76 @@
     .ImgContentImg {
         width: 408px;
         height: 243px;
+    }
+}
+@media (max-width: 480px) {
+    .ImgContentImg {
+        width: 398px;
+        height: 233px;
+    }
+    .titleContent {
+        gap: 15px;
+    }
+}
+@media (max-width: 450px) {
+    .ImgContent {
+        padding: 15px 0;
+    }
+
+    .ImgContentImg {
+        width: 378px;
+        height: 213px;
+    }
+}
+@media (max-width: 400px) {
+    .InfoContent {
+        gap: 12px;
+    }
+
+    .content {
+        padding: 30px 0;
+        gap: 10px;
+    }
+
+    .TitleContentTitle {
+        font-size: 28px;
+    }
+    .InfoContentTitle {
+        font-size: 28px;
+    }
+
+    .ImgContent {
+        padding: 5px 0;
+    }
+
+    .ImgContentImg {
+        width: 348px;
+        height: 193px;
+    }
+}
+@media (max-width: 380px) {
+    .InfoContent {
+        gap: 12px;
+    }
+
+    .content {
+        padding: 20px 0;
+        gap: 10px;
+    }
+
+    .TitleContentTitle {
+        font-size: 26px;
+    }
+    .InfoContentTitle {
+        font-size: 26px;
+    }
+
+    .ImgContent {
+        padding: 5px 0;
+    }
+
+    .ImgContentImg {
+        width: 308px;
+        height: 163px;
     }
 }
