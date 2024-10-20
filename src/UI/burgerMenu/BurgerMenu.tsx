@@ -43,29 +43,29 @@ const BurgerMenu = () => {
               ))}
             </ul>
           </nav>
-          <div className={scss.translate}>
-            <a
-              href="#"
-              className={activeLang === "EN" ? scss.active : ""}
-              onClick={() => handleLangClick("EN")}
-            >
-              EN
-            </a>
-            <a
-              href="#"
-              className={activeLang === "RU" ? scss.active : ""}
-              onClick={() => handleLangClick("RU")}
-            >
-              RU
-            </a>
-            <a
-              href="#"
-              className={activeLang === "KG" ? scss.active : ""}
-              onClick={() => handleLangClick("KG")}
-            >
-              KG
-            </a>
-          </div>
+            <div className={scss.translate}>
+              <a
+                href="#"
+                className={activeLang === "EN" ? scss.active : ""}
+                onClick={() => handleLangClick("EN")}
+              >
+                EN
+              </a>
+              <a
+                href="#"
+                className={activeLang === "RU" ? scss.active : ""}
+                onClick={() => handleLangClick("RU")}
+              >
+                RU
+              </a>
+              <a
+                href="#"
+                className={activeLang === "KG" ? scss.active : ""}
+                onClick={() => handleLangClick("KG")}
+              >
+                KG
+              </a>
+            </div>
         </div>
       </div>
     </>

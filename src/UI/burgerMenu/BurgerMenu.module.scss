@@ -21,7 +21,7 @@ $transition: 0.3s ease;
   box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
   border-radius: $border-radius;
   height: 75%;
-  width: 300px;
+  width: 400px;
   &.active {
     opacity: 1;
     visibility: visible;
@@ -29,21 +29,29 @@ $transition: 0.3s ease;
 
   .content {
     display: flex;
+    align-items: start;
+    justify-content: center;
     flex-direction: column;
-    gap: 15px;
+    gap: 40px;
 
     .nav {
       ul {
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        flex-direction: column;
+        gap: 40px;
         li {
           list-style: none;
           .link {
+            font-size: 20px;
+            font-weight: 500;
             padding: 7px 14px;
             display: block;
             border-radius: $border-radius;
             color: #fff;
             transition: $transition;
-            font-size: 20px;
-            font-weight: 500;
+
             line-height: 22px;
             &:hover {
               background-color: $lightest-slate;
@@ -58,13 +66,14 @@ $transition: 0.3s ease;
       }
     }
     .translate {
+      padding: 7px 14px;
       display: flex;
-      justify-content: flex-start;
-      gap: 12px;
-
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
       a {
         color: #8a8a8a;
-        font-size: 16px;
+        font-size: 20px;
         font-weight: 400;
         cursor: pointer;
         transition: color 0.3s ease;
@@ -82,13 +91,13 @@ $transition: 0.3s ease;
   }
 
   @media (max-width: 900px) {
-    width: 300px;
+    width: 400px;
     top: 60px;
     right: 10px;
   }
 
   @media (max-width: 768px) {
-    width: 300px;
+    width: 400px;
     top: 55px;
     right: 5px;
 
@@ -98,7 +107,7 @@ $transition: 0.3s ease;
   }
 
   @media (max-width: 480px) {
-    width: 300px;
+    width: 400px;
     top: 50px;
     right: 0px;
 
@@ -108,7 +117,7 @@ $transition: 0.3s ease;
   }
 
   @media (max-width: 400px) {
-    width: 300px;
+    width: 100%;
     top: 50px;
     right: 0px;
 
@@ -117,25 +126,25 @@ $transition: 0.3s ease;
     }
   }
 
-  @media (max-width: 300px) {
-    width: 100%;
-    top: 45px;
-    right: 0px;
-    padding: 10px;
+  // @media (max-width: 300px) {
+  //   width: 100%;
+  //   top: 45px;
+  //   right: 0px;
+  //   padding: 10px;
 
-    .content {
-      gap: 5px;
+  //   .content {
+  //     gap: 5px;
 
-      .nav {
-        ul {
-          li {
-            .link {
-              padding: 5px 10px;
-              font-size: clamp(10px, 4vw, 6px);
-            }
-          }
-        }
-      }
-    }
-  }
+  //     .nav {
+  //       ul {
+  //         li {
+  //           .link {
+  //             padding: 5px 10px;
+  //             font-size: clamp(10px, 4vw, 6px);
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
 }
