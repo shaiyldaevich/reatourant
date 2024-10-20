@@ -9,6 +9,7 @@ import slideImg2 from "../../../assets/images/SliderImg (2).svg";
 import slideImg3 from "../../../assets/images/SliderImg (3).svg";
 import slideImg4 from "../../../assets/images/SliderImg (4).svg";
 import slideImg5 from "../../../assets/images/SliderImg (5).svg";
+import { Typography } from "@/UI/Typography/Typography";
 
 interface Slide {
     id: number;
@@ -66,9 +67,14 @@ const BestSeller: React.FC = () => {
                                 src={TextIcon}
                                 alt="Best Seller Icon"
                             />
-                            <h1 className={scss.TitleContentTitle}>
+                            <Typography
+                                variant="h2"
+                                weight="light"
+                                fontFamily="Shalimar"
+                                className={scss.TitleContentTitle}
+                            >
                                 Best Seller
-                            </h1>
+                            </Typography>
                         </div>
                         <div className={scss.InfoContent}>
                             <h1 className={scss.InfoContentTitle}>
