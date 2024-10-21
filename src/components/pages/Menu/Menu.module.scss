@@ -31,7 +31,57 @@
 		}
 	}
 }
-.activeLi {
+.productContent {
+	display: flex;
+	align-items: center;
+	gap: 30px;
+	width: 100%;
+	background: #1f2731;
+	border-radius: 10px;
+	padding: 10px;
+}
+.extras {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	padding-inline: 20px;
+
+	p {
+		color: #939393;
+	}
+}
+.charyBlock {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	gap: 150px;
+}
+
+.productCardTwo {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.produtTextTwo {
+	width: 330px;
+	display: flex;
+	h3 {
+		color: red;
+	}
+}
+.iceCreamTwo {
+	width: 330px;
+
+	h2 {
+		color: white;
+		margin-block: 5px;
+	}
+	p {
+		color: white;
+	}
+}
+
+.productContent .activeLi {
 	width: 100% !important;
 	background-color: #c20909;
 	color: rgb(255, 255, 255);
@@ -57,13 +107,14 @@
 	text-align: center;
 	width: 329px;
 	object-fit: cover;
-	height: 250px;
+	height: 270px;
 }
 .produtText {
 	color: black;
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
+	padding: 10px;
 	h3 {
 		color: red;
 		font-size: 16px;
@@ -75,16 +126,19 @@
 	align-items: flex-start;
 	flex-direction: column;
 	gap: 5px;
+	width: 250px;
+
 	h2 {
 		font-size: 20px;
 		font-weight: 600;
 		color: black;
 	}
 	p {
-		font-size: 14px;
+		font-size: 11px;
 		font-weight: 500;
 		letter-spacing: 0.07em;
 		color: #939393;
+		text-align: left;
 	}
 }
 .productImage {
@@ -92,4 +146,10 @@
 	height: 187px;
 	border-radius: 5px;
 	object-fit: cover;
+}
+
+.extras {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
 }
