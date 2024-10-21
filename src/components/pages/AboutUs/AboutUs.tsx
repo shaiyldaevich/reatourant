@@ -8,7 +8,7 @@ import { Typography } from "@/UI/Typography/Typography";
 
 const AboutUs = () => {
     return (
-        <section className={scss.AboutUs}>
+        <section id="about-us" className={scss.AboutUs}>
             <div className="container">
                 <div className={scss.content}>
                     <div className={scss.titleContent}>
