@@ -4,6 +4,7 @@ import Image from "next/image";
 import img1 from "../../../assets/images/AboutUs (1).svg";
 import img2 from "../../../assets/images/AboutUs (2).svg";
 import TextIcon from "../../../assets/icons/AboutUsIcon.png";
+import { Typography } from "@/UI/Typography/Typography";
 
 const AboutUs = () => {
     return (
@@ -17,19 +18,19 @@ const AboutUs = () => {
                             src={TextIcon}
                             alt="asd"
                         />
-                        <h1 className={scss.TitleContentTitle}> About Us</h1>
+                        <Typography variant="h2" weight="light" fontFamily="shalimar" className={scss.TitleContentTitle}> About Us</Typography>
                     </div>
                     <div className={scss.InfoContent}>
-                        <h1 className={scss.InfoContentTitle}>
+                        <Typography variant="h2" weight="regular" fontFamily="playfair_display" className={scss.InfoContentTitle}>
                             A Journey Throught Cafesio Flavors
-                        </h1>
-                        <h1 className={scss.InfoContentInfo}>
+                        </Typography>
+                        <Typography variant="bodyXS" weight="light" fontFamily="spartan" className={scss.InfoContentInfo}>
                             Try dishes that will open up new tastes for you and
                             delight your eyes with their appearance. Here you
                             will find a cozy atmosphere, excellent service and
                             attention to each guest. Book a table now and enjoy
                             a unique experience of taste discovery!
-                        </h1>
+                        </Typography>
                     </div>
                     <div className={scss.ImgContent}>
                         <Image

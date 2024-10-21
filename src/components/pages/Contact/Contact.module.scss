@@ -27,15 +27,8 @@
       margin-bottom: 20px;
 
       h3 {
-        font-size: 20px;
         color: #fff;
         margin-bottom: 10px;
-      }
-
-      p {
-        font-size: 16px;
-        color: #fff;
-        line-height: 1.5;
       }
     }
 
@@ -117,18 +110,16 @@
       justify-content: center;
       flex-direction: column;
 
-      h3 {
-        font-size: 24px;
-        color: #1f2731;
+      h5 {
         margin-bottom: 15px;
+        color: black;
       }
 
       a {
         display: flex;
         align-items: center;
         gap: 10px;
-        color: #007bff;
-        font-size: 16px;
+
         margin-bottom: 10px;
         text-decoration: none;
 
@@ -141,7 +132,7 @@
           color: #1f2731;
         }
 
-        span {
+        p {
           font-size: 16px;
           color: #1f2731;
         }

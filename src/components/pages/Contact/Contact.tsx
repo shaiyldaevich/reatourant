@@ -2,13 +2,10 @@ import React from "react";
 import scss from "./Contact.module.scss";
 import Image from "next/image";
 import Icon from "../../../assets/icons/contacticon.svg";
-import {
-  FaTelegramPlane,
-  FaInstagram,
-  FaLongArrowAltRight,
-} from "react-icons/fa";
+import { FaTelegramPlane, FaInstagram } from "react-icons/fa";
 import { MdOutlineAddIcCall } from "react-icons/md";
 import { CgMail } from "react-icons/cg";
+import { Typography } from "@/UI/Typography/Typography";
 
 const Contact = () => {
   return (
@@ -17,26 +14,32 @@ const Contact = () => {
         <div className={scss.content}>
           <div className={scss.text}>
             <Image src={Icon} alt="icon" />
-            <h1>
+            <Typography
+              variant="h3"
+              weight="regular"
+              fontFamily="playfair_display"
+            >
               Join Us for <br />
               Happy Hours
-            </h1>
+            </Typography>
             <div className={scss.neighborhood}>
-              <h3>Your neighborhood</h3>
-              <p>
+              <Typography variant="h5" weight="bold" fontFamily="spartan">
+                Your neighborhood
+              </Typography>
+              <Typography variant="bodyL" weight="bold" fontFamily="spartan">
                 225$.Lake Ave.Suite 1150 <br />
                 Pasadena,CA 911101
-              </p>
+              </Typography>
             </div>
             <div className={scss.opening}>
-              <h3>Opening Hours</h3>
+              <Typography variant="h5" weight="bold" fontFamily="spartan">Opening Hours</Typography>
               <p>Mon-Thu: 10:00 am - 01:00 am</p>
               <p>Fri-Sun: 10:00 am - 02:00 am</p>
             </div>
             <div className={scss.btn}>
               <div className={scss.topLine}></div>
               <button className={scss.customButton}>
-                PURCHASE GIFT CARD
+                <Typography variant="bodyXM" weight="regular" fontFamily="spartan">Purchase gift card</Typography>
                 <span className={scss.arrow}>→</span>
               </button>
               <div className={scss.bottomLine}></div>
@@ -44,14 +47,14 @@ const Contact = () => {
           </div>
           <div className={scss.map_div}>
             <div className={scss.map_text}>
-              <h3>Contact Info</h3>
+              <Typography variant="h5" weight="bold" fontFamily="spartan">Contact Info</Typography>
               <a href="tel:+771219900">
                 <MdOutlineAddIcCall />
-                <span>+771219900</span>
+                <Typography variant="bodyXL" weight="light" fontFamily="montserrat">+771219900</Typography>
               </a>
               <a href="mailto:motionweb312@gmail.com">
                 <CgMail />
-                <span>motionweb312@gmail.com</span>
+                <Typography variant="bodyXL" weight="light" fontFamily="montserrat">motionweb312@gmail.com</Typography>
               </a>
               <div className={scss.mess}>
                 <a

@@ -9,6 +9,7 @@ import slideImg2 from "../../../assets/images/SliderImg (2).svg";
 import slideImg3 from "../../../assets/images/SliderImg (3).svg";
 import slideImg4 from "../../../assets/images/SliderImg (4).svg";
 import slideImg5 from "../../../assets/images/SliderImg (5).svg";
+import { Typography } from "@/UI/Typography/Typography";
 
 interface Slide {
     id: number;
@@ -66,19 +67,19 @@ const BestSeller: React.FC = () => {
                                 src={TextIcon}
                                 alt="Best Seller Icon"
                             />
-                            <h1 className={scss.TitleContentTitle}>
+                            <Typography variant="h2" weight="light" fontFamily="shalimar" className={scss.TitleContentTitle}>
                                 Best Seller
-                            </h1>
+                            </Typography>
                         </div>
                         <div className={scss.InfoContent}>
-                            <h1 className={scss.InfoContentTitle}>
+                            <Typography variant="h2" weight="regular" fontFamily="playfair_display" className={scss.InfoContentTitle}>
                                 You Only Reserve Exception
-                            </h1>
-                            <h1 className={scss.InfoContentInfo}>
+                            </Typography>
+                            <Typography variant="bodyXS" weight="light" fontFamily="spartan" className={scss.InfoContentInfo}>
                                 Each location has a menu that is curated just
                                 for them. See what is new at your Cafesio and
                                 You will find Cafesio Covent Garden moments.
-                            </h1>
+                            </Typography>
                         </div>
                     </div>
 
