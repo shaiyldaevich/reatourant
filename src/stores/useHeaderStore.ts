@@ -12,10 +12,10 @@ interface HeaderStore {
 
 export const useHeaderStore = create<HeaderStore>((set) => ({
   links : [
-  { name: "Interior", href: "/interior" },
-  { name: "About Us", href: "/about-us" },
+  { name: "Interior", href: "interior" },
+  { name: "About Us", href: "about-us" },
   { name: "Menu", href: "/menu" },
-  { name: "Contacts", href: "/contacts" },
+  { name: "Contacts", href: "contacts" },
 ],
 
   isOpenBurgerMenu: false,

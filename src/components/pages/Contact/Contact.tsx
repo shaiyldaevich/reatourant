@@ -12,7 +12,7 @@ import { CgMail } from "react-icons/cg";
 
 const Contact = () => {
   return (
-    <section id="contact" className={scss.Contact}>
+    <section id="contacts" className={scss.Contact}>
       <div className="container">
         <div className={scss.content}>
           <div className={scss.text}>
@@ -37,7 +37,7 @@ const Contact = () => {
               <div className={scss.topLine}></div>
               <button className={scss.customButton}>
                 PURCHASE GIFT CARD
-                <span className={scss.arrow}>→</span>
+                <span className={scss.arrow}><FaLongArrowAltRight/> </span>
               </button>
               <div className={scss.bottomLine}></div>
             </div>
