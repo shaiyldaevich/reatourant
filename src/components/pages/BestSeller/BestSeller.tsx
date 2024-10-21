@@ -90,7 +90,7 @@ const BestSeller: React.FC = () => {
 
                     <div className={scss.sliderContainer}>
                         <button className={scss.prevButton} onClick={prevSlide}>
-                            &lt;
+                            ⟪
                         </button>
                         <div
                             className={`${scss.slider} ${
@@ -117,7 +117,7 @@ const BestSeller: React.FC = () => {
                             </div>
                         </div>
                         <button className={scss.nextButton} onClick={nextSlide}>
-                            &gt;
+                            ⟫
                         </button>
                     </div>
                 </div>
