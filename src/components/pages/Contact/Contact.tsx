@@ -5,10 +5,11 @@ import Icon from "../../../assets/icons/contacticon.svg";
 import {
   FaTelegramPlane,
   FaInstagram,
-  FaLongArrowAltRight,
+  FaArrowRight,
 } from "react-icons/fa";
 import { MdOutlineAddIcCall } from "react-icons/md";
 import { CgMail } from "react-icons/cg";
+import { Typography } from "@/UI/Typography/Typography";
 
 const Contact = () => {
   return (
@@ -17,27 +18,27 @@ const Contact = () => {
         <div className={scss.content}>
           <div className={scss.text}>
             <Image src={Icon} alt="icon" />
-            <h1>
+            <Typography variant="h2" weight="regular" fontFamily="playfair_display">
               Join Us for <br />
               Happy Hours
-            </h1>
+            </Typography>
             <div className={scss.neighborhood}>
-              <h3>Your neighborhood</h3>
-              <p>
+              <Typography variant="h5" weight="bold" fontFamily="spartan">Your neighborhood</Typography>
+              <Typography variant="bodyL" weight="bold" fontFamily="spartan">
                 225$.Lake Ave.Suite 1150 <br />
                 Pasadena,CA 911101
-              </p>
+              </Typography>
             </div>
             <div className={scss.opening}>
-              <h3>Opening Hours</h3>
-              <p>Mon-Thu: 10:00 am - 01:00 am</p>
-              <p>Fri-Sun: 10:00 am - 02:00 am</p>
+              <Typography variant="h5" weight="bold" fontFamily="spartan">Opening Hours</Typography>
+              <Typography variant="bodyL" weight="light" fontFamily="spartan">Mon-Thu: 10:00 am - 01:00 am</Typography>
+              <Typography variant="bodyL" weight="light" fontFamily="spartan">Fri-Sun: 10:00 am - 02:00 am</Typography>
             </div>
             <div className={scss.btn}>
               <div className={scss.topLine}></div>
               <button className={scss.customButton}>
                 PURCHASE GIFT CARD
-                <span className={scss.arrow}><FaLongArrowAltRight/> </span>
+                <span className={scss.arrow}><FaArrowRight/> </span>
               </button>
               <div className={scss.bottomLine}></div>
             </div>
