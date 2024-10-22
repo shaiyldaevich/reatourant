@@ -38,7 +38,7 @@ const Baner: React.FC = () => {
           <IconBannerRight />
         </div>
         <Typography variant="h1" weight="regular" fontFamily="playfair_display">{text.name}</Typography>
-        <p>{text.descr}</p>
+        <Typography variant="bodyXS" weight="bold" fontFamily="spartan">{text.descr}</Typography>
         <div className={styles.banerButton}>
           <hr className={styles.hrTop} />
           <button>
@@ -50,16 +50,16 @@ const Baner: React.FC = () => {
       </div>
       <div className={styles.mainInformation}>
         <div className={styles.location}>
-          <p>Location</p>
+          <Typography variant="bodyX" weight="regular" fontFamily="spartan">Location</Typography>
           <hr className={styles.locationHr} />
           <Location />
-          <h5>{Info.locationInfo}</h5>
+          <Typography variant="bodyXM" weight="bold" fontFamily="spartan">{Info.locationInfo}</Typography>
         </div>
         <div className={styles.phone}>
-          <p>Hotline</p>
+          <Typography variant="bodyX" weight="regular" fontFamily="spartan">Hotline</Typography>
           <hr className={styles.phoneHr} />
           <Phone />
-          <h5>{Info.phone}</h5>
+          <Typography variant="bodyXM" weight="bold" fontFamily="spartan">{Info.phone}</Typography>
         </div>
       </div>
       <hr className={styles.BannerHrBotttom} />

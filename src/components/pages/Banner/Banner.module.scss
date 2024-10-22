@@ -50,13 +50,12 @@
         border: 1.6px solid rgb(239, 39, 44);
         background-color: rgba(0, 0, 0, 0);
         color: rgb(255, 255, 255);
-        font-family: Spartan;
-        font-size: 12px;
-        font-weight: 600;
-        line-height: 13px;
-        letter-spacing: 0%;
         text-transform: uppercase;
         gap: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
         .arrow {
           width: 8.41px;
           color: white;
