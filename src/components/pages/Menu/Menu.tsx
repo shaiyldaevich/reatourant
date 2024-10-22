@@ -5,6 +5,7 @@ import scss from './Menu.module.scss'
 
 const Menu = () => {
 	const [activeItem, setActiveItem] = useState('desserts-001')
+	const [loading, setLoading] = useState(false)
 	const items = [
 		{ id: 'desserts-001', title: 'Desserts' },
 		{ id: 'hot-drinks-002', title: 'Hot Drinks' },
@@ -14,7 +15,7 @@ const Menu = () => {
 		{ id: 'fast-foods-006', title: 'Fast Foods' }
 	]
 	const [activeProduct, setActiveProduct] = useState<null | string>(null)
-	function handleClick(item: string | any) {
+	function handleClick(item: string) {
 		setActiveItem(item)
 	}
 
@@ -27,6 +28,13 @@ const Menu = () => {
 		() => products.filter(el => el.categoryId === activeItem),
 		[products, activeItem]
 	)
+
+	const scrollToTop = () => {
+		window.scrollTo({
+			top: 0,
+			behavior: 'smooth'
+		})
+	}
 	return (
 		<div id={scss.menuPage}>
 			<div className='container'>
@@ -91,6 +99,8 @@ const Menu = () => {
 									className={scss.productCard}
 								>
 									<img
+										onLoad={() => setLoading(true)}
+										onClick={scrollToTop}
 										src={el.imageSrc}
 										alt={el.name}
 										className={scss.productImage}
