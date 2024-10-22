@@ -1,4 +1,12 @@
 .Header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 999;
+  border-bottom: 1px solid gray !important;
+  background: #1b2026;
+  // position: sticky;
   .content {
     display: flex;
     align-items: center;

@@ -4,10 +4,11 @@ import Image from "next/image";
 import img1 from "../../../assets/images/AboutUs (1).svg";
 import img2 from "../../../assets/images/AboutUs (2).svg";
 import TextIcon from "../../../assets/icons/AboutUsIcon.png";
+import { Typography } from "@/UI/Typography/Typography";
 
 const AboutUs = () => {
     return (
-        <section className={scss.AboutUs}>
+        <section id="about-us" className={scss.AboutUs}>
             <div className="container">
                 <div className={scss.content}>
                     <div className={scss.titleContent}>
@@ -17,7 +18,14 @@ const AboutUs = () => {
                             src={TextIcon}
                             alt="asd"
                         />
-                        <h1 className={scss.TitleContentTitle}> About Us</h1>
+                        <Typography
+                            variant="h2"
+                            weight="light"
+                            fontFamily="Shalimar"
+                            className={scss.TitleContentTitle}
+                        >
+                            About Us
+                        </Typography>{" "}
                     </div>
                     <div className={scss.InfoContent}>
                         <h1 className={scss.InfoContentTitle}>
