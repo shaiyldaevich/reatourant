@@ -31,11 +31,13 @@
 		}
 	}
 }
+
 .productContent {
 	display: flex;
 	align-items: center;
 	gap: 30px;
-	width: 100%;
+	width: 95%;
+	margin: 0 auto;
 	background: #1f2731;
 	border-radius: 10px;
 	padding: 10px;
@@ -81,7 +83,7 @@
 	}
 }
 
-.productContent .activeLi {
+.activeLi {
 	width: 100% !important;
 	background-color: #c20909;
 	color: rgb(255, 255, 255);
@@ -146,6 +148,7 @@
 	height: 187px;
 	border-radius: 5px;
 	object-fit: cover;
+	transition: transform 0.3s ease-in-out;
 }
 
 .extras {
