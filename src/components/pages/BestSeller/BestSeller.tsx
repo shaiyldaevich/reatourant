@@ -77,14 +77,14 @@ const BestSeller: React.FC = () => {
                             </Typography>
                         </div>
                         <div className={scss.InfoContent}>
-                            <h1 className={scss.InfoContentTitle}>
+                            <Typography variant="h2" weight="regular" fontFamily="playfair_display" className={scss.InfoContentTitle}>
                                 You Only Reserve Exception
-                            </h1>
-                            <h1 className={scss.InfoContentInfo}>
+                            </Typography>
+                            <Typography variant="bodyXS" weight="light" fontFamily="spartan" className={scss.InfoContentInfo}>
                                 Each location has a menu that is curated just
                                 for them. See what is new at your Cafesio and
                                 You will find Cafesio Covent Garden moments.
-                            </h1>
+                            </Typography>
                         </div>
                     </div>
 

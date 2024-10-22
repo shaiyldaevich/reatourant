@@ -28,16 +28,16 @@ const AboutUs = () => {
                         </Typography>{" "}
                     </div>
                     <div className={scss.InfoContent}>
-                        <h1 className={scss.InfoContentTitle}>
+                        <Typography variant="h2" weight="regular" fontFamily="playfair_display" className={scss.InfoContentTitle}>
                             A Journey Throught Cafesio Flavors
-                        </h1>
-                        <h1 className={scss.InfoContentInfo}>
+                        </Typography>
+                        <Typography variant="bodyXS" weight="light" fontFamily="spartan" className={scss.InfoContentInfo}>
                             Try dishes that will open up new tastes for you and
                             delight your eyes with their appearance. Here you
                             will find a cozy atmosphere, excellent service and
                             attention to each guest. Book a table now and enjoy
                             a unique experience of taste discovery!
-                        </h1>
+                        </Typography>
                     </div>
                     <div className={scss.ImgContent}>
                         <Image

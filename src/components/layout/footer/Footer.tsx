@@ -3,6 +3,7 @@ import { FaTelegramPlane, FaInstagram } from "react-icons/fa";
 import scss from "./Footer.module.scss";
 import { Link as Scrollhref } from "react-scroll";
 import { usePathname, useRouter } from "next/navigation";
+import { Typography } from "@/UI/Typography/Typography";
 const Links = [
   { name: "Interior", href: "/interior" },
   { name: "About Us", href: "about-us" },
@@ -27,7 +28,7 @@ const Footer = () => {
       <div className="container">
         <div className={scss.content}>
           <div className={scss.logo}>
-            <h1>Restaurant</h1>
+            <Typography variant="h3" weight="regular" fontFamily="playfair_display">Restaurant</Typography>
           </div>
 
           <div className={scss.nav}>

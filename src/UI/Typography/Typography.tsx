@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Typography.module.scss";
 
 interface TypographyProps {
-  variant: "h1" | "h2" | "h3" | "h4" | "h5" | "p";
+  variant: "h1" | "h2" | "h3" | "h4" | "h5" | "bodyXL" | "bodyL" | "bodyM" | "bodyXS" | "bodyS" | "bodyX" | "bodyXM";
   weight?: "regular" | "bold" | "light";
   children: React.ReactNode;
   className?: string;

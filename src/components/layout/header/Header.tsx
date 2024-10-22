@@ -7,6 +7,7 @@ import BurgerButton from "@/UI/burgerButton/BurgerButton";
 import BurgerMenu from "@/UI/burgerMenu/BurgerMenu";
 import { Link as Scrollhref } from "react-scroll";
 import Link from "next/link";
+import { Typography } from "@/UI/Typography/Typography";
 
 const hrefs = [
   { name: "Interior", href: "interior" },
@@ -53,7 +54,14 @@ const Header = () => {
               offset={0}
               duration={500}
             >
-              <h1 onClick={() => nav.push("/")}>Restaurant</h1>
+              <Typography
+                variant="h3"
+                weight="regular"
+                fontFamily="playfair_display"
+                onClick={() => nav.push("/")}
+              >
+                Restaurant
+              </Typography>
             </Scrollhref>
           </div>
 
@@ -99,9 +107,33 @@ const Header = () => {
 
               <div className={scss.translate}>
                 <select>
-                  <option value="English">En</option>
-                  <option value="Russian">Ru</option>
-                  <option value="Kyrgyz">Ky</option>
+                  <option value="English">
+                    <Typography
+                      variant="bodyX"
+                      weight="regular"
+                      fontFamily="playfair_display"
+                    >
+                      En
+                    </Typography>
+                  </option>
+                  <option value="Russian">
+                    <Typography
+                      variant="bodyX"
+                      weight="regular"
+                      fontFamily="playfair_display"
+                    >
+                      Ru
+                    </Typography>
+                  </option>
+                  <option value="Kyrgyz">
+                    <Typography
+                      variant="bodyX"
+                      weight="regular"
+                      fontFamily="playfair_display"
+                    >
+                      Ky
+                    </Typography>
+                  </option>
                 </select>
               </div>
             </>
