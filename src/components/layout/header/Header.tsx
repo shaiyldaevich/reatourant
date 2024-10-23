@@ -9,6 +9,7 @@ import { Link as Scrollhref } from "react-scroll";
 import Link from "next/link";
 import { useLanguageStore } from "@/stores/useLanguageStore"; 
 
+import { Typography } from "@/UI/Typography/Typography";
 
 
 const Header = () => {
@@ -60,9 +61,15 @@ const Header = () => {
               offset={0}
               duration={500}
             >
-              <h1 onClick={() => nav.push("/")}>
-                {t("Ресторан", "Ресторан", "Restaurant")}
-              </h1>
+
+              <Typography
+                variant="h3"
+                weight="regular"
+                fontFamily="playfair_display"
+                onClick={() => nav.push("/")}
+              >
+                Restaurant
+              </Typography>
             </Scrollhref>
           </div>
 
@@ -107,10 +114,35 @@ const Header = () => {
               </div>
 
               <div className={scss.translate}>
+              
                 <select onChange={handleLanguageChange} value={language}>
-                  <option value="en">En</option>
-                  <option value="ru">Ru</option>
-                  <option value="ky">Ky</option>
+                  <option value="en">
+                    <Typography
+                      variant="bodyX"
+                      weight="regular"
+                      fontFamily="playfair_display"
+                    >
+                      En
+                    </Typography>
+                  </option>
+                  <option value="ru">
+                    <Typography
+                      variant="bodyX"
+                      weight="regular"
+                      fontFamily="playfair_display"
+                    >
+                      Ru
+                    </Typography>
+                  </option>
+                  <option value="ky">
+                    <Typography
+                      variant="bodyX"
+                      weight="regular"
+                      fontFamily="playfair_display"
+                    >
+                      Ky
+                    </Typography>
+                  </option>
                 </select>
               </div>
             </>

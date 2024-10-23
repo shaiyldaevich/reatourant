@@ -5,6 +5,8 @@ import { Link as Scrollhref } from "react-scroll";
 import { usePathname, useRouter } from "next/navigation";
 import { useLanguageStore } from "@/stores/useLanguageStore";
 
+import { Typography } from "@/UI/Typography/Typography";
+
 const Footer = () => {
   const pathname = usePathname();
   const nav = useRouter();
@@ -33,7 +35,7 @@ const Footer = () => {
       <div className="container">
         <div className={scss.content}>
           <div className={scss.logo}>
-            <h1>{t("Ресторан", "Ресторан", "Restaurant")}</h1>
+            <Typography variant="h3" weight="regular" fontFamily="playfair_display">Restaurant</Typography>
           </div>
 
           <div className={scss.nav}>

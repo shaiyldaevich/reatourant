@@ -5,6 +5,7 @@ import scss from './Menu.module.scss'
 
 const Menu = () => {
 	const [activeItem, setActiveItem] = useState('desserts-001')
+	const [loading, setLoading] = useState(false)
 	const items = [
 		{ id: 'desserts-001', title: 'Desserts' },
 		{ id: 'hot-drinks-002', title: 'Hot Drinks' },
@@ -13,8 +14,10 @@ const Menu = () => {
 		{ id: 'eastern-cuisine-005', title: 'Eastern Cuisine' },
 		{ id: 'fast-foods-006', title: 'Fast Foods' }
 	]
+
 	const [activeProduct, setActiveProduct] = useState<null | string>(null)
-	function handleClick(item: string | any) {
+	function handleClick(item: string) {
+		setActiveProduct(item)
 		setActiveItem(item)
 	}
 
@@ -27,12 +30,27 @@ const Menu = () => {
 		() => products.filter(el => el.categoryId === activeItem),
 		[products, activeItem]
 	)
+
+	const scrollToTop = () => {
+		window.scrollTo({
+			top: 0,
+			behavior: 'smooth'
+		})
+	}
 	return (
 		<div id={scss.menuPage}>
 			<div className='container'>
+				{activeProduct && product && (
+					<button
+						className={scss.closeBtn}
+						onClick={() => setActiveProduct('')}
+					>
+						X
+					</button>
+				)}
 				<div className={scss.menuPage}>
 					<div className={scss.menuContent}>
-						<ul>
+						<ul className={scss.ulDF}>
 							{items.map((item, index) => (
 								<li
 									className={activeItem === item.id ? scss.activeLi : ''}
@@ -63,6 +81,8 @@ const Menu = () => {
 								</div>
 								<div className={scss.extras}>
 									<h3>Extras</h3>
+									<hr />
+
 									<div className={scss.charyBlock}>
 										<p>Cherry</p>
 										<p>$0.90</p>
@@ -71,6 +91,7 @@ const Menu = () => {
 										<p>Cherry</p>
 										<p>$0.90</p>
 									</div>
+									<hr />
 									<h3>Extras</h3>
 									<div className={scss.charyBlock}>
 										<p>Cherry</p>
@@ -91,6 +112,8 @@ const Menu = () => {
 									className={scss.productCard}
 								>
 									<img
+										onLoad={() => setLoading(true)}
+										onClick={scrollToTop}
 										src={el.imageSrc}
 										alt={el.name}
 										className={scss.productImage}

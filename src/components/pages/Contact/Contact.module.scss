@@ -15,21 +15,24 @@
   .text {
     flex: 1;
 
-    h1 {
-      font-size: 36px;
-      color: #fff;
+    h2 {
       margin-bottom: 20px;
       line-height: 1.3;
+      margin-top: 20px;
+    }
+    h5 {
+      color: #EF272C;
+      margin-bottom: 10px;
     }
 
     .neighborhood,
     .opening {
       margin-bottom: 20px;
 
-      h3 {
+      p {
         font-size: 20px;
         color: #fff;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
       }
 
       p {
@@ -48,7 +51,7 @@
         color: white;
         padding: 10px 20px;
         border: 2px solid #ff0000;
-        font-size: 16px;
+        font-size: 10px;
         font-weight: bold;
         cursor: pointer;
         text-transform: uppercase;
@@ -66,6 +69,7 @@
         .arrow {
           margin-left: 10px;
           color: #ffffff;
+
         }
       }
 
@@ -116,6 +120,8 @@
       align-items: start;
       justify-content: center;
       flex-direction: column;
+
+    
 
       h3 {
         font-size: 24px;

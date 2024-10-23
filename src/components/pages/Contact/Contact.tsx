@@ -6,11 +6,12 @@ import Icon from "../../../assets/icons/contacticon.svg";
 import {
   FaTelegramPlane,
   FaInstagram,
-  FaLongArrowAltRight,
+  FaArrowRight,
 } from "react-icons/fa";
 import { MdOutlineAddIcCall } from "react-icons/md";
 import { CgMail } from "react-icons/cg";
 import { useLanguageStore } from "@/stores/useLanguageStore";
+import { Typography } from "@/UI/Typography/Typography";
 
 const Contact = () => {
   const { t } = useLanguageStore();
@@ -21,34 +22,23 @@ const Contact = () => {
         <div className={scss.content}>
           <div className={scss.text}>
             <Image src={Icon} alt="icon" />
-            <h1>
-              {t("Биз менен болуңуз", "Присоединяйтесь к нам", "Join Us for")}{" "}
-              <br />
-              {t("Жакшы сааттарга", "для счастливых часов", "Happy Hours")}
-            </h1>
+
+            <Typography variant="h2" weight="regular" fontFamily="playfair_display">
+              Join Us for <br />
+              Happy Hours
+            </Typography>
             <div className={scss.neighborhood}>
-              <h3>{t("Сиздин аймак", "Ваш район", "Your neighborhood")}</h3>
-              <p>
+              <Typography variant="h5" weight="bold" fontFamily="spartan">Your neighborhood</Typography>
+              <Typography variant="bodyL" weight="bold" fontFamily="spartan">
                 225$.Lake Ave.Suite 1150 <br />
                 Pasadena,CA 911101
-              </p>
+              </Typography>
             </div>
             <div className={scss.opening}>
-              <h3>{t("Иштөө сааттары", "Часы работы", "Opening Hours")}</h3>
-              <p>
-                {t(
-                  "Дүш-Бей: 10:00 - 01:00",
-                  "Пн-Чт: 10:00 - 01:00",
-                  "Mon-Thu: 10:00 am - 01:00 am"
-                )}
-              </p>
-              <p>
-                {t(
-                  "Жм-Жк: 10:00 - 02:00",
-                  "Пт-Вс: 10:00 - 02:00",
-                  "Fri-Sun: 10:00 am - 02:00 am"
-                )}
-              </p>
+             
+              <Typography variant="h5" weight="bold" fontFamily="spartan">Opening Hours</Typography>
+              <Typography variant="bodyL" weight="light" fontFamily="spartan">Mon-Thu: 10:00 am - 01:00 am</Typography>
+              <Typography variant="bodyL" weight="light" fontFamily="spartan">Fri-Sun: 10:00 am - 02:00 am</Typography>
             </div>
             <div className={scss.btn}>
               <div className={scss.topLine}></div>
@@ -61,6 +51,7 @@ const Contact = () => {
                 <span className={scss.arrow}>
                   <FaLongArrowAltRight />
                 </span>
+
               </button>
               <div className={scss.bottomLine}></div>
             </div>
