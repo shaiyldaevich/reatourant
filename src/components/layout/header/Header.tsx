@@ -7,22 +7,23 @@ import BurgerButton from "@/UI/burgerButton/BurgerButton";
 import BurgerMenu from "@/UI/burgerMenu/BurgerMenu";
 import { Link as Scrollhref } from "react-scroll";
 import Link from "next/link";
-import { useLanguageStore } from "@/stores/useLanguageStore"; 
+import { useLanguageStore } from "@/stores/useLanguageStore";
 
 import { Typography } from "@/UI/Typography/Typography";
-
 
 const Header = () => {
   const [isMobile, setIsMobile] = useState(true);
   const nav = useRouter();
   const pathname = usePathname();
-  const { t, setLanguage, language } = useLanguageStore(); 
+  const { t, setLanguage, language } = useLanguageStore();
+
   const hrefs = [
     { name: t("Интерьер", "Интерьер", "Interior"), href: "interior" },
     { name: t("Биз жонундо", "О нас", "About Us"), href: "about-us" },
     { name: t("Меню", "Меню", "Menu"), href: "/menu" },
     { name: t("Контакты", "Контакты", "Contacts"), href: "contacts" },
   ];
+
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 1000);
     handleResize();
@@ -61,14 +62,12 @@ const Header = () => {
               offset={0}
               duration={500}
             >
-
               <Typography
                 variant="h3"
                 weight="regular"
                 fontFamily="playfair_display"
-                onClick={() => nav.push("/")}
               >
-                Restaurant
+                {t("Ресторан", "Ресторан", "Restaurant")}
               </Typography>
             </Scrollhref>
           </div>
@@ -114,7 +113,6 @@ const Header = () => {
               </div>
 
               <div className={scss.translate}>
-              
                 <select onChange={handleLanguageChange} value={language}>
                   <option value="en">
                     <Typography
