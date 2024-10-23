@@ -35,7 +35,13 @@ const Footer = () => {
       <div className="container">
         <div className={scss.content}>
           <div className={scss.logo}>
-            <Typography variant="h3" weight="regular" fontFamily="playfair_display">Restaurant</Typography>
+            <Typography
+              variant="h3"
+              weight="regular"
+              fontFamily="playfair_display"
+            >
+              {t("Ресторан", "Ресторан", "Restaurant")}
+            </Typography>
           </div>
 
           <div className={scss.nav}>
