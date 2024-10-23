@@ -13,9 +13,9 @@
     justify-content: space-between;
     padding: 10px;
 
-    .logo h1 {
-      color: #fff;
-      font-family: "Serif";
+    .logo {
+      font-size: clamp(14px, 4vw, 24px);
+      font-weight: 500;
     }
 
     .nav {

@@ -7,19 +7,21 @@ import BurgerButton from "@/UI/burgerButton/BurgerButton";
 import BurgerMenu from "@/UI/burgerMenu/BurgerMenu";
 import { Link as Scrollhref } from "react-scroll";
 import Link from "next/link";
+import { useLanguageStore } from "@/stores/useLanguageStore"; 
 
-const hrefs = [
-  { name: "Interior", href: "interior" },
-  { name: "About Us", href: "about-us" },
-  { name: "Menu", href: "/menu" },
-  { name: "Contacts", href: "contacts" },
-];
+
 
 const Header = () => {
   const [isMobile, setIsMobile] = useState(true);
   const nav = useRouter();
   const pathname = usePathname();
-
+  const { t, setLanguage, language } = useLanguageStore(); 
+  const hrefs = [
+    { name: t("Интерьер", "Интерьер", "Interior"), href: "interior" },
+    { name: t("Биз жонундо", "О нас", "About Us"), href: "about-us" },
+    { name: t("Меню", "Меню", "Menu"), href: "/menu" },
+    { name: t("Контакты", "Контакты", "Contacts"), href: "contacts" },
+  ];
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 1000);
     handleResize();
@@ -40,6 +42,11 @@ const Header = () => {
     }
   };
 
+  const handleLanguageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const selectedLanguage = e.target.value as "ky" | "ru" | "en";
+    setLanguage(selectedLanguage);
+  };
+
   return (
     <header className={scss.Header}>
       <div className="container">
@@ -53,7 +60,9 @@ const Header = () => {
               offset={0}
               duration={500}
             >
-              <h1 onClick={() => nav.push("/")}>Restaurant</h1>
+              <h1 onClick={() => nav.push("/")}>
+                {t("Ресторан", "Ресторан", "Restaurant")}
+              </h1>
             </Scrollhref>
           </div>
 
@@ -92,16 +101,16 @@ const Header = () => {
                 <CiSearch className={scss.searchIcon} />
                 <input
                   type="text"
-                  placeholder="Search"
+                  placeholder={t("Издөө", "Поиск", "Search")}
                   className={scss.form_field}
                 />
               </div>
 
               <div className={scss.translate}>
-                <select>
-                  <option value="English">En</option>
-                  <option value="Russian">Ru</option>
-                  <option value="Kyrgyz">Ky</option>
+                <select onChange={handleLanguageChange} value={language}>
+                  <option value="en">En</option>
+                  <option value="ru">Ru</option>
+                  <option value="ky">Ky</option>
                 </select>
               </div>
             </>

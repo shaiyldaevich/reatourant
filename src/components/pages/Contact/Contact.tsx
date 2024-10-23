@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import scss from "./Contact.module.scss";
 import Image from "next/image";
@@ -9,8 +10,11 @@ import {
 } from "react-icons/fa";
 import { MdOutlineAddIcCall } from "react-icons/md";
 import { CgMail } from "react-icons/cg";
+import { useLanguageStore } from "@/stores/useLanguageStore";
 
 const Contact = () => {
+  const { t } = useLanguageStore();
+
   return (
     <section id="contacts" className={scss.Contact}>
       <div className="container">
@@ -18,33 +22,58 @@ const Contact = () => {
           <div className={scss.text}>
             <Image src={Icon} alt="icon" />
             <h1>
-              Join Us for <br />
-              Happy Hours
+              {t("Биз менен болуңуз", "Присоединяйтесь к нам", "Join Us for")}{" "}
+              <br />
+              {t("Жакшы сааттарга", "для счастливых часов", "Happy Hours")}
             </h1>
             <div className={scss.neighborhood}>
-              <h3>Your neighborhood</h3>
+              <h3>{t("Сиздин аймак", "Ваш район", "Your neighborhood")}</h3>
               <p>
                 225$.Lake Ave.Suite 1150 <br />
                 Pasadena,CA 911101
               </p>
             </div>
             <div className={scss.opening}>
-              <h3>Opening Hours</h3>
-              <p>Mon-Thu: 10:00 am - 01:00 am</p>
-              <p>Fri-Sun: 10:00 am - 02:00 am</p>
+              <h3>{t("Иштөө сааттары", "Часы работы", "Opening Hours")}</h3>
+              <p>
+                {t(
+                  "Дүш-Бей: 10:00 - 01:00",
+                  "Пн-Чт: 10:00 - 01:00",
+                  "Mon-Thu: 10:00 am - 01:00 am"
+                )}
+              </p>
+              <p>
+                {t(
+                  "Жм-Жк: 10:00 - 02:00",
+                  "Пт-Вс: 10:00 - 02:00",
+                  "Fri-Sun: 10:00 am - 02:00 am"
+                )}
+              </p>
             </div>
             <div className={scss.btn}>
               <div className={scss.topLine}></div>
               <button className={scss.customButton}>
-                PURCHASE GIFT CARD
-                <span className={scss.arrow}><FaLongArrowAltRight/> </span>
+                {t(
+                  "Белек картасын сатып алуу",
+                  "Приобрести подарочную карту",
+                  "PURCHASE GIFT CARD"
+                )}
+                <span className={scss.arrow}>
+                  <FaLongArrowAltRight />
+                </span>
               </button>
               <div className={scss.bottomLine}></div>
             </div>
           </div>
           <div className={scss.map_div}>
             <div className={scss.map_text}>
-              <h3>Contact Info</h3>
+              <h3>
+                {t(
+                  "Байланыш маалыматтары",
+                  "Контактная информация",
+                  "Contact Info"
+                )}
+              </h3>
               <a href="tel:+771219900">
                 <MdOutlineAddIcCall />
                 <span>+771219900</span>

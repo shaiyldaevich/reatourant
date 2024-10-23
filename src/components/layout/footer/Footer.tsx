@@ -3,15 +3,20 @@ import { FaTelegramPlane, FaInstagram } from "react-icons/fa";
 import scss from "./Footer.module.scss";
 import { Link as Scrollhref } from "react-scroll";
 import { usePathname, useRouter } from "next/navigation";
-const Links = [
-  { name: "Interior", href: "/interior" },
-  { name: "About Us", href: "about-us" },
-  { name: "Menu", href: "/menu" },
-  { name: "Contacts", href: "contacts" },
-];
+import { useLanguageStore } from "@/stores/useLanguageStore";
+
 const Footer = () => {
   const pathname = usePathname();
   const nav = useRouter();
+  const { t } = useLanguageStore();
+
+  const Links = [
+    { name: t("Интерьер", "Интерьер", "Interior"), href: "/interior" },
+    { name: t("Биз жонундо", "О нас", "About Us"), href: "about-us" },
+    { name: t("Меню", "Меню", "Menu"), href: "/menu" },
+    { name: t("Контакты", "Контакты", "Contacts"), href: "contacts" },
+  ];
+
   const handleNavigation = (href: string) => {
     if (pathname === "/menu" && href !== "/menu") {
       nav.push(`/?section=${href.replace("/", "")}`);
@@ -22,12 +27,13 @@ const Footer = () => {
       document.getElementById(section)?.scrollIntoView({ behavior: "smooth" });
     }
   };
+
   return (
     <footer className={scss.Footer}>
       <div className="container">
         <div className={scss.content}>
           <div className={scss.logo}>
-            <h1>Restaurant</h1>
+            <h1>{t("Ресторан", "Ресторан", "Restaurant")}</h1>
           </div>
 
           <div className={scss.nav}>
@@ -74,7 +80,10 @@ const Footer = () => {
 
         <div className={scss.divider}></div>
 
-        <div className={scss.copyright}>&copy; 2023 Motion Study LLC</div>
+        <div className={scss.copyright}>
+          &copy; 2023{" "}
+          {t("Motion Study ООО", "Motion Study ООО", "Motion Study LLC")}
+        </div>
       </div>
     </footer>
   );
