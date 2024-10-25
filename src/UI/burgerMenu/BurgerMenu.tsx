@@ -4,22 +4,18 @@ import Link from "next/link";
 import { useHeaderStore } from "@/stores/useHeaderStore";
 import { usePathname, useRouter } from "next/navigation";
 import { Link as Scrollhref } from "react-scroll";
+import { useLanguageStore } from "@/stores/useLanguageStore"; // Импорт хранилища языка
 
-const hrefs = [
-  { name: "Interior", href: "interior" },
-  { name: "About Us", href: "about-us" },
-  { name: "Menu", href: "/menu" },
-  { name: "Contacts", href: "contacts" },
-];
 const BurgerMenu = () => {
   const pathname = usePathname();
   const { isOpenBurgerMenu, setIsOpenBurgerMenu, links } = useHeaderStore();
-  const [activeLang, setActiveLang] = useState("EN");
+  const { language, setLanguage, t } = useLanguageStore(); // Используем Zustand для работы с языком
   const nav = useRouter();
 
-  const handleLangClick = (lang: string) => {
-    setActiveLang(lang);
+  const handleLangClick = (lang: "en" | "ru" | "ky") => {
+    setLanguage(lang);
   };
+
   const handleNavigation = (href: string) => {
     if (pathname === "/menu" && href !== "/menu") {
       nav.push(`/?section=${href.replace("/", "")}`);
@@ -56,7 +52,7 @@ const BurgerMenu = () => {
                       onClick={() => setIsOpenBurgerMenu(false)}
                       href={item.href}
                     >
-                      {item.name}
+                      {t(item.name, item.name, item.name)}
                     </Link>
                   ) : (
                     <Scrollhref
@@ -76,7 +72,7 @@ const BurgerMenu = () => {
                         handleNavigation(item.href), setIsOpenBurgerMenu(false);
                       }}
                     >
-                      {item.name}
+                      {t(item.name, item.name, item.name)}
                     </Scrollhref>
                   )}
                 </li>
@@ -86,22 +82,22 @@ const BurgerMenu = () => {
           <div className={scss.translate}>
             <a
               href="#"
-              className={activeLang === "EN" ? scss.active : ""}
-              onClick={() => handleLangClick("EN")}
+              className={language === "en" ? scss.active : ""}
+              onClick={() => handleLangClick("en")}
             >
               EN
             </a>
             <a
               href="#"
-              className={activeLang === "RU" ? scss.active : ""}
-              onClick={() => handleLangClick("RU")}
+              className={language === "ru" ? scss.active : ""}
+              onClick={() => handleLangClick("ru")}
             >
               RU
             </a>
             <a
               href="#"
-              className={activeLang === "KG" ? scss.active : ""}
-              onClick={() => handleLangClick("KG")}
+              className={language === "ky" ? scss.active : ""}
+              onClick={() => handleLangClick("ky")}
             >
               KG
             </a>

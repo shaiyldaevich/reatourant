@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import scss from "./Contact.module.scss";
 import Image from "next/image";
@@ -5,47 +6,71 @@ import Icon from "../../../assets/icons/contacticon.svg";
 import {
   FaTelegramPlane,
   FaInstagram,
-  FaArrowRight,
+  FaLongArrowAltRight,
 } from "react-icons/fa";
 import { MdOutlineAddIcCall } from "react-icons/md";
 import { CgMail } from "react-icons/cg";
+import { useLanguageStore } from "@/stores/useLanguageStore";
 import { Typography } from "@/UI/Typography/Typography";
 
 const Contact = () => {
+  const { t } = useLanguageStore();
+
   return (
     <section id="contacts" className={scss.Contact}>
       <div className="container">
         <div className={scss.content}>
           <div className={scss.text}>
             <Image src={Icon} alt="icon" />
+
             <Typography variant="h2" weight="regular" fontFamily="playfair_display">
-              Join Us for <br />
-              Happy Hours
+              {t("Бизге кошулуңуз", "Присоединяйтесь к нам", "Join Us")} <br />
+              {t("Көңүлдүү сааттарга", "на счастливые часы", "for Happy Hours")}
             </Typography>
             <div className={scss.neighborhood}>
-              <Typography variant="h5" weight="bold" fontFamily="spartan">Your neighborhood</Typography>
+              <Typography variant="h5" weight="bold" fontFamily="spartan">
+                {t("Сиздин коңшу", "Ваше соседство", "Your neighborhood")}
+              </Typography>
               <Typography variant="bodyL" weight="bold" fontFamily="spartan">
                 225$.Lake Ave.Suite 1150 <br />
                 Pasadena,CA 911101
               </Typography>
             </div>
             <div className={scss.opening}>
-              <Typography variant="h5" weight="bold" fontFamily="spartan">Opening Hours</Typography>
-              <Typography variant="bodyL" weight="light" fontFamily="spartan">Mon-Thu: 10:00 am - 01:00 am</Typography>
-              <Typography variant="bodyL" weight="light" fontFamily="spartan">Fri-Sun: 10:00 am - 02:00 am</Typography>
+              <Typography variant="h5" weight="bold" fontFamily="spartan">
+                {t("Иштөө сааттары", "Часы работы", "Opening Hours")}
+              </Typography>
+              <Typography variant="bodyL" weight="light" fontFamily="spartan">
+                {t("Дүйшөмбү-Бейшемби: 10:00 - 01:00", "Пн-Чт: 10:00 - 01:00", "Mon-Thu: 10:00 am - 01:00 am")}
+              </Typography>
+              <Typography variant="bodyL" weight="light" fontFamily="spartan">
+                {t("Жума-Жекшемби: 10:00 - 02:00", "Пт-Вс: 10:00 - 02:00", "Fri-Sun: 10:00 am - 02:00 am")}
+              </Typography>
             </div>
             <div className={scss.btn}>
               <div className={scss.topLine}></div>
               <button className={scss.customButton}>
-                PURCHASE GIFT CARD
-                <span className={scss.arrow}><FaArrowRight/> </span>
+                {t(
+                  "Белек картасын сатып алуу",
+                  "Приобрести подарочную карту",
+                  "PURCHASE GIFT CARD"
+                )}
+                <span className={scss.arrow}>
+                  <FaLongArrowAltRight />
+                </span>
               </button>
               <div className={scss.bottomLine}></div>
             </div>
           </div>
           <div className={scss.map_div}>
             <div className={scss.map_text}>
-              <h3>Contact Info</h3>
+              <h3>
+                {t(
+                  "Байланыш маалыматтары",
+                  "Контактная информация",
+                  "Contact Info"
+                )}
+              </h3>
               <a href="tel:+771219900">
                 <MdOutlineAddIcCall />
                 <span>+771219900</span>

@@ -7,19 +7,22 @@ import BurgerButton from "@/UI/burgerButton/BurgerButton";
 import BurgerMenu from "@/UI/burgerMenu/BurgerMenu";
 import { Link as Scrollhref } from "react-scroll";
 import Link from "next/link";
-import { Typography } from "@/UI/Typography/Typography";
+import { useLanguageStore } from "@/stores/useLanguageStore";
 
-const hrefs = [
-  { name: "Interior", href: "interior" },
-  { name: "About Us", href: "about-us" },
-  { name: "Menu", href: "/menu" },
-  { name: "Contacts", href: "contacts" },
-];
+import { Typography } from "@/UI/Typography/Typography";
 
 const Header = () => {
   const [isMobile, setIsMobile] = useState(true);
   const nav = useRouter();
   const pathname = usePathname();
+  const { t, setLanguage, language } = useLanguageStore();
+
+  const hrefs = [
+    { name: t("Интерьер", "Интерьер", "Interior"), href: "interior" },
+    { name: t("Биз жонундо", "О нас", "About Us"), href: "about-us" },
+    { name: t("Меню", "Меню", "Menu"), href: "/menu" },
+    { name: t("Контакты", "Контакты", "Contacts"), href: "contacts" },
+  ];
 
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 1000);
@@ -41,6 +44,11 @@ const Header = () => {
     }
   };
 
+  const handleLanguageChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const selectedLanguage = e.target.value as "ky" | "ru" | "en";
+    setLanguage(selectedLanguage);
+  };
+
   return (
     <header className={scss.Header}>
       <div className="container">
@@ -58,9 +66,8 @@ const Header = () => {
                 variant="h3"
                 weight="regular"
                 fontFamily="playfair_display"
-                onClick={() => nav.push("/")}
               >
-                Restaurant
+                {t("Ресторан", "Ресторан", "Restaurant")}
               </Typography>
             </Scrollhref>
           </div>
@@ -100,14 +107,14 @@ const Header = () => {
                 <CiSearch className={scss.searchIcon} />
                 <input
                   type="text"
-                  placeholder="Search"
+                  placeholder={t("Издөө", "Поиск", "Search")}
                   className={scss.form_field}
                 />
               </div>
 
               <div className={scss.translate}>
-                <select>
-                  <option value="English">
+                <select onChange={handleLanguageChange} value={language}>
+                  <option value="en">
                     <Typography
                       variant="bodyX"
                       weight="regular"
@@ -116,7 +123,7 @@ const Header = () => {
                       En
                     </Typography>
                   </option>
-                  <option value="Russian">
+                  <option value="ru">
                     <Typography
                       variant="bodyX"
                       weight="regular"
@@ -125,7 +132,7 @@ const Header = () => {
                       Ru
                     </Typography>
                   </option>
-                  <option value="Kyrgyz">
+                  <option value="ky">
                     <Typography
                       variant="bodyX"
                       weight="regular"
