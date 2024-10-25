@@ -1,7 +1,7 @@
-'use client'
-import { products } from '@/const/Products'
-import { useMemo, useState } from 'react'
-import scss from './Menu.module.scss'
+"use client";
+import { products } from "@/const/Products";
+import { useMemo, useState } from "react";
+import scss from "./Menu.module.scss";
 
 const Menu = () => {
 	const [activeItem, setActiveItem] = useState('desserts-001')
@@ -21,15 +21,15 @@ const Menu = () => {
 		setActiveItem(item)
 	}
 
-	const product = useMemo(
-		() => products.find(el => el.id === activeProduct),
-		[products, activeProduct]
-	)
+  const product = useMemo(
+    () => products.find((el) => el.id === activeProduct),
+    [products, activeProduct]
+  );
 
-	const filterProducts = useMemo(
-		() => products.filter(el => el.categoryId === activeItem),
-		[products, activeItem]
-	)
+  const filterProducts = useMemo(
+    () => products.filter((el) => el.categoryId === activeItem),
+    [products, activeItem]
+  );
 
 	const scrollToTop = () => {
 		window.scrollTo({
@@ -40,17 +40,9 @@ const Menu = () => {
 	return (
 		<div id={scss.menuPage}>
 			<div className='container'>
-				{activeProduct && product && (
-					<button
-						className={scss.closeBtn}
-						onClick={() => setActiveProduct('')}
-					>
-						X
-					</button>
-				)}
 				<div className={scss.menuPage}>
 					<div className={scss.menuContent}>
-						<ul className={scss.ulDF}>
+						<ul>
 							{items.map((item, index) => (
 								<li
 									className={activeItem === item.id ? scss.activeLi : ''}
@@ -81,8 +73,6 @@ const Menu = () => {
 								</div>
 								<div className={scss.extras}>
 									<h3>Extras</h3>
-									<hr />
-
 									<div className={scss.charyBlock}>
 										<p>Cherry</p>
 										<p>$0.90</p>
@@ -91,7 +81,6 @@ const Menu = () => {
 										<p>Cherry</p>
 										<p>$0.90</p>
 									</div>
-									<hr />
 									<h3>Extras</h3>
 									<div className={scss.charyBlock}>
 										<p>Cherry</p>
@@ -135,4 +124,4 @@ const Menu = () => {
 	)
 }
 
-export default Menu
+export default Menu;
