@@ -7,7 +7,15 @@ import IconBannerRight from "@/assets/icons/IconBannerRight";
 import { FaArrowRight } from "react-icons/fa";
 import Link from "next/link";
 
-const MainMenu = () => {
+type CategoryType =
+  | "Desserts"
+  | "Hot Drinks"
+  | "Cold Drinks"
+  | "National Foods"
+  | "Eastern cuisine"
+  | "Fast foods";
+
+const MainMenu: React.FC = () => {
   const textMenu = [
     { name: "Beer Brewery", descr: "Cold Drinks", price: 12 },
     { name: "Burger&Pasta", descr: "Fast foods", price: 24 },
@@ -18,17 +26,17 @@ const MainMenu = () => {
     { name: "Ponchik", descr: "Desserts", price: 20 },
   ];
 
-  const [activeCategory, setActiveCategory] = useState(null); 
+  const [activeCategory, setActiveCategory] = useState<CategoryType | null>(
+    null
+  );
 
-  const handleCategoryClick = (category) => {
+  const handleCategoryClick = (category: CategoryType) => {
     setActiveCategory(category === activeCategory ? null : category);
   };
 
   const filteredMenu = activeCategory
     ? textMenu.filter((item) => item.descr === activeCategory)
     : textMenu;
-
- 
 
   return (
     <div className={styles.mainMenu}>
@@ -65,7 +73,7 @@ const MainMenu = () => {
                 className={`${styles[`mainBtn${index + 1}`]} ${
                   activeCategory === category ? styles.active : ""
                 }`}
-                onClick={() => handleCategoryClick(category)}
+                onClick={() => handleCategoryClick(category as CategoryType)}
               >
                 <Typography
                   variant="h5"
@@ -91,7 +99,7 @@ const MainMenu = () => {
                     {el.name}
                   </Typography>
                   <Typography
-                    variant="bodyL"
+                    variant="h3"
                     weight="regular"
                     fontFamily="playfair_display"
                   >
@@ -128,11 +136,11 @@ const MainMenu = () => {
 
         <div className={styles.Button}>
           <hr className={styles.hrTop} />
-          <Link href={'/menu'}>
-          <button>
-            View Full menu
-            <FaArrowRight className={styles.arr} />
-          </button>
+          <Link href={"/menu"}>
+            <button>
+              View Full menu
+              <FaArrowRight className={styles.arr} />
+            </button>
           </Link>
           <hr className={styles.hrBottom} />
         </div>
