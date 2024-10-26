@@ -129,6 +129,7 @@ const MainMenu: React.FC = () => {
                     {el.descr}
                   </Typography>
                   <Typography
+                  className={styles.oreder}
                     variant="bodyXS"
                     weight="regular"
                     fontFamily="playfair_display"
