@@ -1,15 +1,15 @@
-import React, { useState } from "react";
+import React  from "react";
 import scss from "./BurgerMenu.module.scss";
 import Link from "next/link";
 import { useHeaderStore } from "@/stores/useHeaderStore";
 import { usePathname, useRouter } from "next/navigation";
 import { Link as Scrollhref } from "react-scroll";
-import { useLanguageStore } from "@/stores/useLanguageStore"; // Импорт хранилища языка
+import { useLanguageStore } from "@/stores/useLanguageStore";
 
 const BurgerMenu = () => {
   const pathname = usePathname();
   const { isOpenBurgerMenu, setIsOpenBurgerMenu, links } = useHeaderStore();
-  const { language, setLanguage, t } = useLanguageStore(); // Используем Zustand для работы с языком
+  const { language, setLanguage, t } = useLanguageStore();
   const nav = useRouter();
 
   const handleLangClick = (lang: "en" | "ru" | "ky") => {

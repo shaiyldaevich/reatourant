@@ -6,7 +6,10 @@ import IconBannerLeft from "@/assets/icons/IconBannerLeft";
 import IconBannerRight from "@/assets/icons/IconBannerRight";
 import { FaArrowRight } from "react-icons/fa";
 import Link from "next/link";
+import { useLanguageStore } from "@/stores/useLanguageStore";
 
+const MainMenu = () => {
+  const { t } = useLanguageStore();
 type CategoryType =
   | "Desserts"
   | "Hot Drinks"
@@ -26,11 +29,10 @@ const MainMenu: React.FC = () => {
     { name: "Ponchik", descr: "Desserts", price: 20 },
   ];
 
-  const [activeCategory, setActiveCategory] = useState<CategoryType | null>(
-    null
-  );
+  const [activeCategory, setActiveCategory] = useState<string | null>(null);
 
-  const handleCategoryClick = (category: CategoryType) => {
+  const handleCategoryClick = (category: string) => {
+
     setActiveCategory(category === activeCategory ? null : category);
   };
 
@@ -45,7 +47,7 @@ const MainMenu: React.FC = () => {
           <div className={styles.menuText}>
             <IconBannerLeft />
             <Typography variant="h2" weight="light" fontFamily="shalimar">
-              Main Menu
+              {t("Башкы меню", "Главное меню", "Main Menu")}
             </Typography>
             <IconBannerRight />
           </div>
@@ -54,19 +56,25 @@ const MainMenu: React.FC = () => {
             weight="regular"
             fontFamily="playfair_display"
           >
-            Exceptional Quality. <br /> Delightfully Delicious
+            {t("Мыкты сапат", "Высокое качество", "Exceptional Quality.")}
+            <br />
+            {t(
+              "Тамактардын даамдуу",
+              "Изысканные блюда",
+              "Delightfully Delicious"
+            )}
           </Typography>
         </div>
 
         <div className={styles.mainMenu}>
           <div className={styles.menuButton}>
             {[
-              "Desserts",
-              "Hot Drinks",
-              "Cold Drinks",
-              "National Foods",
-              "Eastern cuisine",
-              "Fast foods",
+              t("Десерттер", "Десерты", "Desserts"),
+              t("Ысык суусундуктар", "Горячие напитки", "Hot Drinks"),
+              t("Суусундуктар", "Холодные напитки", "Cold Drinks"),
+              t("Улуттук тамактар", "Национальная еда", "National Foods"),
+              t("Чыгыш ашканасы", "Восточная кухня", "Eastern cuisine"),
+              t("Тез тамак", "Фастфуд", "Fast foods"),
             ].map((category, index) => (
               <div
                 key={index}
@@ -126,7 +134,7 @@ const MainMenu: React.FC = () => {
                     weight="regular"
                     fontFamily="playfair_display"
                   >
-                    Order Now
+                    {t("Заказ кылуу", "Заказать сейчас", "Order Now")}
                   </Typography>
                 </div>
               </div>
@@ -138,7 +146,12 @@ const MainMenu: React.FC = () => {
           <hr className={styles.hrTop} />
           <Link href={"/menu"}>
             <button>
-              View Full menu
+              {t(
+                "Толук менюну көрүү",
+                "Посмотреть полное меню",
+                "View Full menu"
+              )}
+
               <FaArrowRight className={styles.arr} />
             </button>
           </Link>
