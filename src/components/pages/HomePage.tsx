@@ -5,16 +5,16 @@ import Contact from "./Contact/Contact";
 import Interer from "./Interer/Interer";
 import MainMenu from "./MainMenu/MainMenu";
 const HomePage = () => {
-  return (
-    <>
-      <Banner />
-      <AboutUs />
-      <BestSeller />
-      <MainMenu/>
-      <Interer/>
-      <Contact />
-    </>
-  );
+    return (
+        <>
+            <Banner />
+            <AboutUs />
+            <BestSeller />
+            <MainMenu />
+            <Interer />
+            <Contact />
+        </>
+    );
 };
 
 export default HomePage;
