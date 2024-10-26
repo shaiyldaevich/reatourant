@@ -8,8 +8,6 @@ import { FaArrowRight } from "react-icons/fa";
 import Link from "next/link";
 import { useLanguageStore } from "@/stores/useLanguageStore";
 
-const MainMenu = () => {
-  const { t } = useLanguageStore();
 type CategoryType =
   | "Desserts"
   | "Hot Drinks"
@@ -19,6 +17,8 @@ type CategoryType =
   | "Fast foods";
 
 const MainMenu: React.FC = () => {
+  const { t } = useLanguageStore();
+
   const textMenu = [
     { name: "Beer Brewery", descr: "Cold Drinks", price: 12 },
     { name: "Burger&Pasta", descr: "Fast foods", price: 24 },
@@ -32,7 +32,6 @@ const MainMenu: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
 
   const handleCategoryClick = (category: string) => {
-
     setActiveCategory(category === activeCategory ? null : category);
   };
 
@@ -144,14 +143,13 @@ const MainMenu: React.FC = () => {
 
         <div className={styles.Button}>
           <hr className={styles.hrTop} />
-          <Link href={"/menu"}>
+          <Link href="/menu">
             <button>
               {t(
                 "Толук менюну көрүү",
                 "Посмотреть полное меню",
                 "View Full menu"
               )}
-
               <FaArrowRight className={styles.arr} />
             </button>
           </Link>
