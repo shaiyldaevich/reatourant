@@ -8,16 +8,15 @@ import { FaArrowRight } from "react-icons/fa";
 import Link from "next/link";
 import { useLanguageStore } from "@/stores/useLanguageStore";
 
-type CategoryType =
-  | "Desserts"
-  | "Hot Drinks"
-  | "Cold Drinks"
-  | "National Foods"
-  | "Eastern cuisine"
-  | "Fast foods";
-
-const MainMenu: React.FC = () => {
+const MainMenu = () => {
   const { t } = useLanguageStore();
+  type CategoryType =
+    | "Desserts"
+    | "Hot Drinks"
+    | "Cold Drinks"
+    | "National Foods"
+    | "Eastern cuisine"
+    | "Fast foods";
 
   const textMenu = [
     { name: "Beer Brewery", descr: "Cold Drinks", price: 12 },
@@ -160,5 +159,4 @@ const MainMenu: React.FC = () => {
     </div>
   );
 };
-
 export default MainMenu;
