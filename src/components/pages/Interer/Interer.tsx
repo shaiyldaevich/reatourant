@@ -24,6 +24,7 @@ const Interer = () => {
     autoplaySpeed: 3000,
     pauseOnHover: true,
     arrows: false,
+
   };
 
   return (

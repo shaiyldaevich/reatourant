@@ -128,6 +128,7 @@ const MainMenu = () => {
                     {el.descr}
                   </Typography>
                   <Typography
+                  className={styles.oreder}
                     variant="bodyXS"
                     weight="regular"
                     fontFamily="playfair_display"
@@ -142,14 +143,13 @@ const MainMenu = () => {
 
         <div className={styles.Button}>
           <hr className={styles.hrTop} />
-          <Link href={"/menu"}>
+          <Link href="/menu">
             <button>
               {t(
                 "Толук менюну көрүү",
                 "Посмотреть полное меню",
                 "View Full menu"
               )}
-
               <FaArrowRight className={styles.arr} />
             </button>
           </Link>
