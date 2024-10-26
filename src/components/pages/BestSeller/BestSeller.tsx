@@ -17,7 +17,7 @@ interface Slide {
   image: StaticImageData;
 }
 
-const BestSeller: React.FC = () => {
+const BestSeller = () => {
   const slides: Slide[] = [
     { id: 1, image: slideImg1 },
     { id: 2, image: slideImg2 },

@@ -16,7 +16,6 @@ const Header = () => {
   const nav = useRouter();
   const pathname = usePathname();
   const { t, setLanguage, language } = useLanguageStore();
-
   const hrefs = [
     { name: t("Интерьер", "Интерьер", "Interior"), href: "interior" },
     { name: t("Биз жонундо", "О нас", "About Us"), href: "about-us" },
@@ -54,22 +53,14 @@ const Header = () => {
       <div className="container">
         <div className={scss.content}>
           <div className={scss.logo}>
-            <Scrollhref
-              activeClass="active"
-              to={"home"}
-              spy={true}
-              smooth={true}
-              offset={0}
-              duration={500}
+            <Typography
+              variant="h3"
+              weight="regular"
+              fontFamily="playfair_display"
+              onClick={() => nav.push("/")}
             >
-              <Typography
-                variant="h3"
-                weight="regular"
-                fontFamily="playfair_display"
-              >
-                {t("Ресторан", "Ресторан", "Restaurant")}
-              </Typography>
-            </Scrollhref>
+              {t("Ресторан", "Ресторан", "Restaurant")}
+            </Typography>
           </div>
 
           {isMobile ? (

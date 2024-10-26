@@ -39,9 +39,10 @@ const Footer = () => {
               variant="h3"
               weight="regular"
               fontFamily="playfair_display"
+              onClick={() => nav.push("/")}
             >
               {t("Ресторан", "Ресторан", "Restaurant")}
-            </Typography>
+            </Typography> 
           </div>
 
           <div className={scss.nav}>
