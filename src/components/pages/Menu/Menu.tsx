@@ -2,10 +2,12 @@
 import { products } from "@/const/Products";
 import { useMemo, useState } from "react";
 import scss from "./Menu.module.scss";
+import Image from "next/image";
 
 const Menu = () => {
 	const [activeItem, setActiveItem] = useState('desserts-001')
 	const [loading, setLoading] = useState(false)
+	console.log("🚀 ~ Menu ~ loading:", loading)
 	const items = [
 		{ id: 'desserts-001', title: 'Desserts' },
 		{ id: 'hot-drinks-002', title: 'Hot Drinks' },
@@ -23,12 +25,12 @@ const Menu = () => {
 
   const product = useMemo(
     () => products.find((el) => el.id === activeProduct),
-    [products, activeProduct]
+    [ activeProduct]
   );
 
   const filterProducts = useMemo(
     () => products.filter((el) => el.categoryId === activeItem),
-    [products, activeItem]
+    [ activeItem]
   );
 
 	const scrollToTop = () => {
@@ -58,7 +60,7 @@ const Menu = () => {
 						{activeProduct && product && (
 							<div className={scss.productContent}>
 								<div key={product.id} className={scss.productCardTwo}>
-									<img
+									<Image
 										src={product.imageSrc}
 										alt={product.name}
 										className={scss.productImage}
@@ -100,7 +102,7 @@ const Menu = () => {
 									key={el.id}
 									className={scss.productCard}
 								>
-									<img
+									<Image
 										onLoad={() => setLoading(true)}
 										onClick={scrollToTop}
 										src={el.imageSrc}
