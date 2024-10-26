@@ -13,8 +13,6 @@ import "./Interer.css";
 import Image from "next/image";
 import { useLanguageStore } from "@/stores/useLanguageStore";
 
-
-
 const Interer = () => {
   const { t } = useLanguageStore();
   const settings = {
@@ -26,7 +24,36 @@ const Interer = () => {
     autoplaySpeed: 3000,
     pauseOnHover: true,
     arrows: false,
-
+    responsive: [
+      {
+        breakpoint: 375, 
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 414, 
+        settings: {
+          slidesToShow: 1.5,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 430, 
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 820, 
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   return (
@@ -52,7 +79,6 @@ const Interer = () => {
               </div>
               <div className={styles.mainImg}>
                 <Image src={interer2} alt="Modern interior design 2" />
-
               </div>
               <div className={styles.mainImg}>
                 <Image src={interer1} alt="Modern interior design 3" />
