@@ -1,4 +1,5 @@
-import React  from "react";
+"use client";
+import React from "react";
 import scss from "./BurgerMenu.module.scss";
 import Link from "next/link";
 import { useHeaderStore } from "@/stores/useHeaderStore";
@@ -69,7 +70,8 @@ const BurgerMenu = () => {
                       offset={0}
                       duration={500}
                       onClick={() => {
-                        handleNavigation(item.href), setIsOpenBurgerMenu(false);
+                        handleNavigation(item.href);
+                        setIsOpenBurgerMenu(false);
                       }}
                     >
                       {t(item.name, item.name, item.name)}
