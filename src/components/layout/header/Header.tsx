@@ -8,7 +8,6 @@ import BurgerMenu from "@/UI/burgerMenu/BurgerMenu";
 import { Link as Scrollhref } from "react-scroll";
 import Link from "next/link";
 import { useLanguageStore } from "@/stores/useLanguageStore";
-
 import { Typography } from "@/UI/Typography/Typography";
 
 const Header = () => {

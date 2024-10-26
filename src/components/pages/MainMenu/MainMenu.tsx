@@ -10,6 +10,15 @@ import { useLanguageStore } from "@/stores/useLanguageStore";
 
 const MainMenu = () => {
   const { t } = useLanguageStore();
+type CategoryType =
+  | "Desserts"
+  | "Hot Drinks"
+  | "Cold Drinks"
+  | "National Foods"
+  | "Eastern cuisine"
+  | "Fast foods";
+
+const MainMenu: React.FC = () => {
   const textMenu = [
     { name: "Beer Brewery", descr: "Cold Drinks", price: 12 },
     { name: "Burger&Pasta", descr: "Fast foods", price: 24 },
@@ -23,6 +32,7 @@ const MainMenu = () => {
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
 
   const handleCategoryClick = (category: string) => {
+
     setActiveCategory(category === activeCategory ? null : category);
   };
 
@@ -71,7 +81,7 @@ const MainMenu = () => {
                 className={`${styles[`mainBtn${index + 1}`]} ${
                   activeCategory === category ? styles.active : ""
                 }`}
-                onClick={() => handleCategoryClick(category)}
+                onClick={() => handleCategoryClick(category as CategoryType)}
               >
                 <Typography
                   variant="h5"
@@ -97,7 +107,7 @@ const MainMenu = () => {
                     {el.name}
                   </Typography>
                   <Typography
-                    variant="bodyL"
+                    variant="h3"
                     weight="regular"
                     fontFamily="playfair_display"
                   >
@@ -141,6 +151,7 @@ const MainMenu = () => {
                 "Посмотреть полное меню",
                 "View Full menu"
               )}
+
               <FaArrowRight className={styles.arr} />
             </button>
           </Link>

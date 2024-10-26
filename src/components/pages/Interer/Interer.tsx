@@ -7,10 +7,13 @@ import interer1 from "../../../assets/images/1.svg";
 import interer2 from "../../../assets/images/interer2.png";
 
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.scss";
+import "slick-carousel/slick/slick-theme.scss";
+import "./Interer.css";
 import Image from "next/image";
 import { useLanguageStore } from "@/stores/useLanguageStore";
+
+
 
 const Interer = () => {
   const { t } = useLanguageStore();
@@ -23,6 +26,7 @@ const Interer = () => {
     autoplaySpeed: 3000,
     pauseOnHover: true,
     arrows: false,
+
   };
 
   return (
@@ -48,6 +52,7 @@ const Interer = () => {
               </div>
               <div className={styles.mainImg}>
                 <Image src={interer2} alt="Modern interior design 2" />
+
               </div>
               <div className={styles.mainImg}>
                 <Image src={interer1} alt="Modern interior design 3" />
