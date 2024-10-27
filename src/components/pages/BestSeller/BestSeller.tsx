@@ -10,7 +10,6 @@ import slideImg2 from "../../../assets/images/SliderImg (2).svg";
 import slideImg3 from "../../../assets/images/SliderImg (3).svg";
 import slideImg4 from "../../../assets/images/SliderImg (4).svg";
 import slideImg5 from "../../../assets/images/SliderImg (5).svg";
-import { Typography } from "@/UI/Typography/Typography";
 import { useLanguageStore } from "@/stores/useLanguageStore";
 interface Slide {
     id: number;
@@ -50,11 +49,10 @@ const BestSeller: React.FC = () => {
         }
     };
 
-    // Добавляем свайперы
     const handlers = useSwipeable({
         onSwipedLeft: nextSlide,
         onSwipedRight: prevSlide,
-        preventDefaultTouchmoveEvent: true,
+        // preventDefaultTouchmoveEvent: true,
         trackTouch: true,
         trackMouse: true,
     });

@@ -698,8 +698,6 @@
     .slide {
         flex: 0 0 60px;
     }
-    .slides {
-    }
 
     .TitleContentTitle {
         font-size: 31px;
@@ -747,8 +745,6 @@
     .slide {
         flex: 0 0 60px;
     }
-    .slides {
-    }
 
     .TitleContentTitle {
         font-size: 29px;
@@ -786,8 +782,6 @@
     }
     .slide {
         flex: 0 0 60px;
-    }
-    .slides {
     }
 
     .TitleContentTitle {
@@ -828,8 +822,6 @@
     .slide {
         flex: 0 0 60px;
     }
-    .slides {
-    }
 
     .TitleContentTitle {
         font-size: 25px;
@@ -868,8 +860,6 @@
     .slide {
         flex: 0 0 60px;
     }
-    .slides {
-    }
 
     .TitleContentTitle {
         font-size: 23px;
@@ -896,6 +886,7 @@
 @media (max-width: 380px) {
     .content {
         gap: 20px;
+        padding: 20px 0;
     }
 
     .slider {
@@ -907,8 +898,6 @@
     }
     .slide {
         flex: 0 0 60px;
-    }
-    .slides {
     }
 
     .TitleContentTitle {
