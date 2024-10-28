@@ -1,0 +1,161 @@
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -10vh;
+
+  .mainModal {
+    width: 320px;
+    height: 339px;
+    border-radius: 8px;
+    box-shadow: -1px 0px 23px 1px rgba(207, 207, 207, 0.2);
+    background: rgb(31, 39, 49);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+    position: absolute;
+    .modalUser {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      .userIcon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 52px;
+        height: 52px;
+        background: rgb(253, 231, 233);
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+      }
+      .modalText {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        input {
+          border: none;
+          background-color: rgba(0, 0, 0, 0);
+          color: grey;
+          font-family: Spartan;
+          font-size: 17px;
+          font-weight: 400;
+          line-height: 19px;
+          letter-spacing: 0%;
+          text-align: left;
+        }
+      }
+    }
+    .modalPhone {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      .phoneIcon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 52px;
+        height: 52px;
+        background: rgb(253, 231, 233);
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+      }
+      .modalText {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        input {
+          border: none;
+          background-color: rgba(0, 0, 0, 0);
+          color: grey;
+          font-family: Spartan;
+          font-size: 17px;
+          font-weight: 400;
+          line-height: 19px;
+          letter-spacing: 0%;
+          text-align: left;
+        }
+      }
+    }
+    .btn {
+      color: rgb(255, 255, 255);
+      font-family: Spartan;
+      font-size: 17px;
+      font-weight: 500;
+      line-height: 19px;
+      letter-spacing: 0%;
+      text-align: center;
+      cursor: pointer;
+      width: 100%;
+      height: 59px;
+      left: 23px;
+      top: 238px;
+      border-radius: 4px;
+      background: rgb(117, 53, 54);
+    }
+  }
+}
+
+
+@media (max-width: 375px) {
+    .mainModal{
+        width: 130%;
+
+        .modalPhone, .modalUser{
+            .modalText{
+                p{
+                    text-align: left;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 414px) {
+    .mainModal{
+        width: 130%;
+
+        .modalPhone, .modalUser{
+            .modalText{
+                p{
+                    text-align: left;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 430px) {
+    .mainModal{
+        width: 130%;
+
+        .modalPhone, .modalUser{
+            .modalText{
+                p{
+                    text-align: left;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .mainModal{
+        width: 130%;
+
+        .modalPhone, .modalUser{
+            .modalText{
+                p{
+                    text-align: left;
+                }
+            }
+        }
+    }
+}

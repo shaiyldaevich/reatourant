@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import styles from "./Banner.module.scss";
 import { FaArrowRight } from "react-icons/fa";
 import IconBannerLeft from "@/assets/icons/IconBannerLeft";
@@ -8,6 +7,8 @@ import Location from "@/assets/icons/Location";
 import Phone from "@/assets/icons/Phone";
 import { Typography } from "@/UI/Typography/Typography";
 import { useLanguageStore } from "@/stores/useLanguageStore";
+import ModalWindow from "@/UI/ModalWindow/ModalWindow";
+import { useState } from "react";
 
 interface Text {
   name: string;
@@ -40,9 +41,15 @@ const Baner: React.FC = () => {
     phone: "+771219900",
   };
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
+
   return (
     <div className={styles.mainBaner}>
       <hr className={styles.BannerHrTop} />
+        <div className="container">
       <div className={styles.mainText}>
         <div className={styles.banerText}>
           <IconBannerLeft />
@@ -59,11 +66,14 @@ const Baner: React.FC = () => {
         </Typography>
         <div className={styles.banerButton}>
           <hr className={styles.hrTop} />
-          <button>
+          <button onClick={openModal}>
             {t("Заказать столик", "Заказать столик", "Reserve Your Table")}
             <FaArrowRight className={styles.arr} />
           </button>
           <hr className={styles.hrBottom} />
+          <div>
+            <ModalWindow isOpen={isModalOpen} onClose={closeModal} />
+          </div>
         </div>
       </div>
       <div className={styles.mainInformation}>
@@ -88,8 +98,9 @@ const Baner: React.FC = () => {
           </Typography>
         </div>
       </div>
-      <hr className={styles.BannerHrBotttom} />
     </div>
+      <hr className={styles.BannerHrBotttom} />
+  </div>
   );
 };
 
