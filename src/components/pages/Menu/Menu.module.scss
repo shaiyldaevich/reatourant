@@ -166,7 +166,16 @@
 	flex-direction: column;
 	gap: 20px;
 }
-
+.closeMenu {
+	position: absolute;
+	top: 100px;
+	left: 80px;
+	font-size: 30px;
+	cursor: pointer;
+}
+.titleMenu {
+	padding: 22px;
+}
 //? media
 
 @media (max-width: 1076px) {
