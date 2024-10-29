@@ -7,7 +7,7 @@ import MainMenu from "./MainMenu/MainMenu";
 const HomePage = () => {
   return (
     <>
-      <Banner />Menu
+      <Banner />
       <AboutUs />
       <BestSeller />
       <MainMenu/>
