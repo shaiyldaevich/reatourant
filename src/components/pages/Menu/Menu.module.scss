@@ -20,14 +20,35 @@
 		justify-content: center;
 		flex-direction: column;
 		li {
-			width: 70%;
+			position: relative;
 			padding-block: 15px;
-			border-bottom: 1px solid rgba(134, 133, 133, 0.521);
+
 			font-family: Silk Serif;
 			font-size: 24px;
 			font-weight: 600;
 			color: rgb(194, 193, 193);
+			width: 100%;
 			cursor: pointer;
+			hr {
+				position: absolute;
+				bottom: 0;
+				left: 10%;
+				width: 80%;
+				margin: 0 auto;
+				border: 1px solid rgba(109, 109, 109, 0.526);
+			}
+		}
+		li::after {
+			content: '';
+			position: absolute;
+			bottom: 50%;
+			right: -30px;
+			width: 60px;
+			height: 1px;
+			background: white;
+			transition: all 0.3s ease;
+			transform: rotateY(90deg);
+			transform-origin: left;
 		}
 	}
 }
@@ -98,10 +119,13 @@
 	}
 }
 .activeLi {
-	width: 100% !important;
 	background-color: #c20909 !important;
 	color: rgb(255, 255, 255);
+	&::after {
+		transform: rotateY(0) !important;
+	}
 }
+
 .menuBlocks {
 	width: 750px;
 }

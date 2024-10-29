@@ -1,5 +1,6 @@
 'use client'
 import { products } from '@/const/Products'
+import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { useMemo, useState } from 'react'
 import emtyPhoto from '../../../assets/images/emtyPhoto.png'
@@ -52,13 +53,25 @@ const Menu = () => {
 									onClick={() => handleClick(item.id)}
 								>
 									{item.title}
+									<hr />
 								</li>
 							))}
 						</ul>
 					</div>
 					<div className={scss.menuBlocks}>
 						{activeProduct && product && (
-							<>
+							<motion.div
+								key={activeProduct}
+								initial={{
+									opacity: 0,
+									y: -10
+								}}
+								animate={{
+									opacity: 1,
+									y: 0
+								}}
+								transition={{ duration: 0.5 }}
+							>
 								<div className={scss.productContent}>
 									<div key={product.id} className={scss.productCardTwo}>
 										{product.imageSrc ? (
@@ -102,18 +115,23 @@ const Menu = () => {
 									</div>
 								</div>
 								<h1 className={scss.titleMenu}>{product.name}</h1>
-							</>
+							</motion.div>
 						)}
 						<div className={scss.productList}>
-							{filterProducts.map(el => (
-								<div
-									onClick={() => setActiveProduct(el.id)}
+							{filterProducts.map((el, idx) => (
+								<motion.div
+									initial={{ opacity: 0, y: 10 }}
+									animate={{ opacity: 1, y: 0 }}
+									transition={{ duration: 0.3 * (idx + 1) }}
+									onClick={() => {
+										setActiveProduct(el.id)
+										scrollToTop()
+									}}
 									key={el.id}
 									className={scss.productCard}
 								>
 									<Image
 										onLoad={() => setLoading(true)}
-										onClick={scrollToTop}
 										src={el.imageSrc ? el.imageSrc : emtyPhoto}
 										alt={el.name}
 										className={scss.productImage}
@@ -128,7 +146,7 @@ const Menu = () => {
 										</div>
 										<h3>${el.price}</h3>
 									</div>
-								</div>
+								</motion.div>
 							))}
 						</div>
 					</div>
