@@ -223,8 +223,210 @@
         width: 310px;
         font-size: 10px;
     }
+
+    .content {
+        gap: 5px;
+    }
 }
-@media (max-width: 1001px) {
+@media (max-width: 1030px) {
+    .ImgContentImg {
+        width: 518px;
+        height: 243px;
+    }
+
+    .TitleContentTitle {
+        font-size: 30px;
+    }
+    .InfoContentTitle {
+        width: 280px;
+        font-size: 30px;
+    }
+    .InfoContentInfo {
+        width: 310px;
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 980px) {
+    .ImgContentImg {
+        width: 508px;
+        height: 233px;
+    }
+
+    .TitleContentTitle {
+        font-size: 28px;
+    }
+    .InfoContentTitle {
+        width: 280px;
+        font-size: 28px;
+    }
+    .InfoContentInfo {
+        width: 310px;
+        font-size: 10px;
+    }
+}
+@media (max-width: 930px) {
+    .ImgContentImg {
+        width: 498px;
+        height: 223px;
+    }
+
+    .TitleContentTitle {
+        font-size: 27px;
+    }
+    .InfoContentTitle {
+        width: 280px;
+        font-size: 27px;
+    }
+    .InfoContentInfo {
+        width: 310px;
+        font-size: 10px;
+    }
+}
+@media (max-width: 850px) {
+    .ImgContentImg {
+        width: 488px;
+        height: 213px;
+    }
+
+    .TitleContentTitle {
+        font-size: 26px;
+    }
+    .InfoContentTitle {
+        width: 280px;
+        font-size: 26px;
+    }
+    .InfoContentInfo {
+        width: 310px;
+        font-size: 10px;
+    }
+}
+@media (max-width: 800px) {
+    .ImgContentImg {
+        width: 478px;
+        height: 203px;
+    }
+    .ImgContent {
+        padding: 30px 0;
+    }
+
+    .titleContent {
+        gap: 20px;
+    }
+
+    .TitleContentTitle {
+        font-size: 25px;
+    }
+    .InfoContentTitle {
+        width: 280px;
+        font-size: 25px;
+    }
+    .InfoContentInfo {
+        width: 280px;
+        font-size: 10px;
+    }
+}
+@media (max-width: 770px) {
+    .ImgContentImg {
+        width: 468px;
+        height: 193px;
+    }
+    .ImgContent {
+        padding: 30px 0;
+    }
+
+    .titleContent {
+        gap: 20px;
+    }
+
+    .TitleContentTitle {
+        font-size: 24px;
+    }
+    .InfoContentTitle {
+        width: 280px;
+        font-size: 24px;
+    }
+    .InfoContentInfo {
+        width: 310px;
+        font-size: 10px;
+    }
+}
+@media (max-width: 740px) {
+    .ImgContentImg {
+        width: 458px;
+        height: 183px;
+    }
+    .ImgContent {
+        padding: 30px 0;
+    }
+
+    .titleContent {
+        gap: 20px;
+    }
+
+    .TitleContentTitle {
+        font-size: 23px;
+    }
+    .InfoContentTitle {
+        width: 280px;
+        font-size: 23px;
+    }
+    .InfoContentInfo {
+        width: 310px;
+        font-size: 10px;
+    }
+}
+@media (max-width: 700px) {
+    .ImgContentImg {
+        width: 448px;
+        height: 173px;
+    }
+    .ImgContent {
+        padding: 30px 0;
+    }
+
+    .titleContent {
+        gap: 20px;
+    }
+
+    .TitleContentTitle {
+        font-size: 22px;
+    }
+    .InfoContentTitle {
+        width: 200px;
+        font-size: 22px;
+    }
+    .InfoContentInfo {
+        width: 310px;
+        font-size: 9px;
+    }
+}
+@media (max-width: 660px) {
+    .ImgContentImg {
+        width: 438px;
+        height: 163px;
+    }
+    .ImgContent {
+        padding: 30px 0;
+    }
+
+    .titleContent {
+        gap: 20px;
+    }
+
+    .TitleContentTitle {
+        font-size: 21px;
+    }
+    .InfoContentTitle {
+        width: 200px;
+        font-size: 21px;
+    }
+    .InfoContentInfo {
+        width: 260px;
+        font-size: 9px;
+    }
+}
+@media (max-width: 630px) {
     .InfoContent {
         display: flex;
         align-items: flex-start;
@@ -233,6 +435,22 @@
 
     .InfoContent {
         gap: 20px;
+    }
+
+    .titleContent {
+        gap: 30px;
+    }
+
+    .TitleContentTitle {
+        font-size: 32px;
+    }
+    .InfoContentTitle {
+        width: 350px;
+        font-size: 32px;
+    }
+    .InfoContentInfo {
+        width: 480px;
+        font-size: 15px;
     }
 
     .content {
@@ -249,78 +467,286 @@
     }
 
     .ImgContentImg {
-        width: 408px;
-        height: 243px;
+        width: 560px;
+        height: 310px;
     }
 }
-@media (max-width: 480px) {
-    .ImgContentImg {
-        width: 398px;
-        height: 233px;
+@media (max-width: 600px) {
+    .InfoContent {
+        gap: 20px;
     }
+
     .titleContent {
-        gap: 15px;
+        gap: 30px;
     }
-}
-@media (max-width: 450px) {
-    .ImgContent {
-        padding: 15px 0;
+
+    .TitleContentTitle {
+        font-size: 31px;
+    }
+    .InfoContentTitle {
+        width: 350px;
+        font-size: 31px;
+    }
+    .InfoContentInfo {
+        width: 480px;
+        font-size: 15px;
+    }
+
+    .content {
+        padding: 40px 0;
+        gap: 15px;
     }
 
     .ImgContentImg {
-        width: 378px;
-        height: 213px;
+        width: 510px;
+        height: 290px;
+    }
+}
+@media (max-width: 550px) {
+    .InfoContent {
+        gap: 20px;
+    }
+
+    .titleContent {
+        gap: 30px;
+    }
+
+    .TitleContentTitle {
+        font-size: 29px;
+    }
+    .InfoContentTitle {
+        width: 320px;
+        font-size: 29px;
+    }
+    .InfoContentInfo {
+        width: 420px;
+        font-size: 13px;
+    }
+
+    .content {
+        padding: 40px 0;
+        gap: 15px;
+    }
+
+    .ImgContentImg {
+        width: 460px;
+        height: 270px;
+    }
+}
+@media (max-width: 500px) {
+    .InfoContent {
+        gap: 20px;
+    }
+
+    .titleContent {
+        gap: 20px;
+    }
+
+    .TitleContentTitle {
+        font-size: 27px;
+    }
+    .InfoContentTitle {
+        width: 290px;
+        font-size: 27px;
+    }
+    .InfoContentInfo {
+        width: 390px;
+        font-size: 11px;
+    }
+
+    .content {
+        padding: 40px 0;
+        gap: 15px;
+    }
+
+    .ImgContentImg {
+        width: 420px;
+        height: 240px;
+    }
+}
+@media (max-width: 500px) {
+    .InfoContent {
+        gap: 20px;
+    }
+
+    .titleContent {
+        gap: 20px;
+    }
+
+    .TitleContentTitle {
+        font-size: 25px;
+    }
+    .InfoContentTitle {
+        width: 290px;
+        font-size: 25px;
+    }
+    .InfoContentInfo {
+        width: 390px;
+        font-size: 10px;
+    }
+
+    .content {
+        padding: 40px 0;
+        gap: 15px;
+    }
+
+    .ImgContentImg {
+        width: 430px;
+        height: 250px;
+    }
+}
+@media (max-width: 470px) {
+    .InfoContent {
+        gap: 20px;
+    }
+
+    .titleContent {
+        gap: 20px;
+    }
+
+    .TitleContentTitle {
+        font-size: 24px;
+    }
+    .InfoContentTitle {
+        width: 270px;
+        font-size: 24px;
+    }
+    .InfoContentInfo {
+        width: 390px;
+        font-size: 10px;
+    }
+
+    .content {
+        padding: 40px 0;
+        gap: 15px;
+    }
+
+    .ImgContentImg {
+        width: 400px;
+        height: 230px;
+    }
+}
+@media (max-width: 440px) {
+    .InfoContent {
+        gap: 20px;
+    }
+
+    .titleContent {
+        gap: 20px;
+    }
+
+    .TitleContentTitle {
+        font-size: 23px;
+    }
+    .InfoContentTitle {
+        width: 240px;
+        font-size: 23px;
+    }
+    .InfoContentInfo {
+        width: 340px;
+        font-size: 10px;
+    }
+
+    .content {
+        padding: 40px 0;
+        gap: 15px;
+    }
+
+    .ImgContentImg {
+        width: 360px;
+        height: 200px;
     }
 }
 @media (max-width: 400px) {
     .InfoContent {
-        gap: 12px;
+        gap: 20px;
     }
 
-    .content {
-        padding: 30px 0;
-        gap: 10px;
+    .titleContent {
+        gap: 20px;
     }
 
     .TitleContentTitle {
-        font-size: 28px;
+        font-size: 22px;
     }
     .InfoContentTitle {
-        font-size: 28px;
+        width: 240px;
+        font-size: 22px;
+    }
+    .InfoContentInfo {
+        width: 340px;
+        font-size: 10px;
     }
 
-    .ImgContent {
-        padding: 5px 0;
+    .content {
+        padding: 40px 0;
+        gap: 15px;
     }
 
     .ImgContentImg {
-        width: 348px;
-        height: 193px;
+        width: 340px;
+        height: 200px;
     }
 }
 @media (max-width: 380px) {
     .InfoContent {
-        gap: 12px;
+        gap: 20px;
+    }
+
+    .titleContent {
+        gap: 20px;
+    }
+
+    .TitleContentTitle {
+        font-size: 21px;
+    }
+    .InfoContentTitle {
+        width: 240px;
+        font-size: 21px;
+    }
+    .InfoContentInfo {
+        width: 280px;
+        font-size: 9px;
+    }
+
+    .content {
+        padding: 40px 0;
+        gap: 15px;
+    }
+
+    .ImgContentImg {
+        width: 300px;
+        height: 180px;
+    }
+}
+@media (max-width: 380px) {
+    .InfoContent {
+        gap: 20px;
+    }
+
+    .titleContent {
+        gap: 20px;
+    }
+
+    .TitleContentTitle {
+        font-size: 21px;
+    }
+    .InfoContentTitle {
+        width: 240px;
+        font-size: 21px;
+    }
+    .InfoContentInfo {
+        width: 280px;
+        font-size: 9px;
     }
 
     .content {
         padding: 20px 0;
-        gap: 10px;
-    }
-
-    .TitleContentTitle {
-        font-size: 26px;
-    }
-    .InfoContentTitle {
-        font-size: 26px;
-    }
-
-    .ImgContent {
-        padding: 5px 0;
+        gap: 15px;
     }
 
     .ImgContentImg {
-        width: 308px;
-        height: 163px;
+        width: 280px;
+        height: 160px;
     }
 }

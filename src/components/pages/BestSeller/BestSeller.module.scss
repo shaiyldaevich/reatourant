@@ -5,7 +5,10 @@
 }
 
 .content {
+    padding: 50px 0;
     display: grid;
+    align-items: center;
+    justify-content: center;
     grid-template-columns: 1fr 1.5fr;
 }
 
@@ -67,7 +70,7 @@
 }
 
 .slider {
-    width: 620px;
+    width: 720px;
     overflow: hidden;
 }
 
@@ -101,11 +104,11 @@
 }
 
 .prevButton {
-    left: 30px;
+    left: 15px;
 }
 
 .nextButton {
-    right: 30px;
+    right: 10px;
 }
 
 .prevButton:hover,
@@ -123,17 +126,17 @@
         height: 340px;
     }
     .prevButton {
-        left: 55px;
+        left: 20px;
     }
 
     .nextButton {
-        right: 55px;
+        right: 20px;
     }
     .slide {
         flex: 0 0 200px;
     }
     .slider {
-        width: 560px;
+        width: 700px;
     }
     .ImgContentImg {
         width: 488px;
@@ -161,7 +164,7 @@
         flex: 0 0 190px;
     }
     .slider {
-        width: 530px;
+        width: 680px;
     }
     .ImgContentImg {
         width: 478px;
@@ -189,7 +192,7 @@
         flex: 0 0 180px;
     }
     .slider {
-        width: 500px;
+        width: 660px;
     }
     .ImgContentImg {
         width: 468px;
@@ -220,8 +223,15 @@
     .slide {
         flex: 0 0 170px;
     }
+    .prevButton {
+        left: 10px;
+    }
+
+    .nextButton {
+        right: 10px;
+    }
     .slider {
-        width: 480px;
+        width: 640px;
     }
     .ImgContentImg {
         width: 458px;
@@ -241,13 +251,6 @@
 }
 
 @media (max-width: 1230px) {
-    .prevButton {
-        left: 60px;
-    }
-
-    .nextButton {
-        right: 60px;
-    }
     .sliderImg {
         width: 310px;
         height: 300px;
@@ -263,6 +266,16 @@
     .TitleContentTitle {
         font-size: 34px;
     }
+    .prevButton {
+        left: 0px;
+    }
+
+    .nextButton {
+        right: 0px;
+    }
+    .slider {
+        width: 620px;
+    }
     .InfoContentTitle {
         width: 340px;
         font-size: 34px;
@@ -274,11 +287,14 @@
 }
 @media (max-width: 1180px) {
     .prevButton {
-        left: 50px;
+        left: 10px;
     }
 
     .nextButton {
-        right: 50px;
+        right: 10px;
+    }
+    .slider {
+        width: 580px;
     }
     .sliderImg {
         width: 290px;
@@ -306,11 +322,14 @@
 }
 @media (max-width: 1130px) {
     .prevButton {
-        left: 40px;
+        left: 0px;
     }
 
     .nextButton {
-        right: 25px;
+        right: 0px;
+    }
+    .slider {
+        width: 560px;
     }
     .sliderImg {
         width: 280px;
@@ -338,11 +357,14 @@
 }
 @media (max-width: 1080px) {
     .prevButton {
-        left: 25px;
+        left: 0px;
     }
 
     .nextButton {
-        right: 15px;
+        right: 0px;
+    }
+    .slider {
+        width: 520px;
     }
     .sliderImg {
         width: 260px;
@@ -369,267 +391,570 @@
     }
 }
 
-@media (max-width: 1001px) {
-    .content {
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
-    }
+@media (max-width: 980px) {
     .prevButton {
-        left: 5px;
+        left: 0px;
     }
 
     .nextButton {
-        right: 5px;
+        right: 0px;
+    }
+    .slider {
+        width: 480px;
+    }
+    .sliderImg {
+        width: 240px;
+        height: 230px;
+    }
+    .slide {
+        flex: 0 0 120px;
     }
 
+    .ImgContentImg {
+        width: 388px;
+        height: 83px;
+    }
+    .TitleContentTitle {
+        font-size: 30px;
+    }
+    .InfoContentTitle {
+        width: 280px;
+        font-size: 30px;
+    }
+    .InfoContentInfo {
+        width: 250px;
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 980px) {
+    .prevButton {
+        left: 0px;
+    }
+
+    .nextButton {
+        right: 0px;
+    }
+    .slider {
+        width: 480px;
+    }
+    .sliderImg {
+        width: 240px;
+        height: 230px;
+    }
+    .slide {
+        flex: 0 0 120px;
+    }
+
+    .ImgContentImg {
+        width: 388px;
+        height: 83px;
+    }
+    .TitleContentTitle {
+        font-size: 30px;
+    }
+    .InfoContentTitle {
+        width: 280px;
+        font-size: 30px;
+    }
+    .InfoContentInfo {
+        width: 250px;
+        font-size: 10px;
+    }
+    .titleContent {
+        gap: 20px;
+    }
+}
+@media (max-width: 930px) {
+    .prevButton {
+        left: -5px;
+        font-size: 29px;
+    }
+
+    .nextButton {
+        right: -5px;
+        font-size: 29px;
+    }
+    .slider {
+        width: 460px;
+    }
+    .sliderImg {
+        width: 230px;
+        height: 220px;
+    }
+    .slide {
+        flex: 0 0 120px;
+    }
+
+    .ImgContentImg {
+        width: 388px;
+        height: 83px;
+    }
+    .TitleContentTitle {
+        font-size: 29px;
+    }
+    .InfoContentTitle {
+        width: 280px;
+        font-size: 29px;
+    }
+    .InfoContentInfo {
+        width: 250px;
+        font-size: 10px;
+    }
+    .titleContent {
+        gap: 20px;
+    }
+}
+@media (max-width: 880px) {
+    .prevButton {
+        left: -10px;
+        font-size: 28px;
+    }
+
+    .nextButton {
+        right: -10px;
+        font-size: 28px;
+    }
+    .slider {
+        width: 440px;
+    }
+    .sliderImg {
+        width: 220px;
+        height: 210px;
+    }
+    .slide {
+        flex: 0 0 120px;
+    }
+
+    .ImgContentImg {
+        width: 388px;
+        height: 83px;
+    }
+    .TitleContentTitle {
+        font-size: 28px;
+    }
+    .InfoContentTitle {
+        width: 280px;
+        font-size: 28px;
+    }
+    .InfoContentInfo {
+        width: 250px;
+        font-size: 10px;
+    }
+    .titleContent {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 830px) {
+    .prevButton {
+        left: -10px;
+        font-size: 27px;
+    }
+
+    .nextButton {
+        right: -10px;
+        font-size: 27px;
+    }
+    .slider {
+        width: 400px;
+    }
+    .sliderImg {
+        width: 200px;
+        height: 190px;
+    }
+    .slide {
+        flex: 0 0 120px;
+    }
+
+    .TitleContentTitle {
+        font-size: 27px;
+    }
+    .InfoContentTitle {
+        width: 270px;
+        font-size: 27px;
+    }
+    .InfoContentInfo {
+        width: 240px;
+        font-size: 10px;
+    }
+    .titleContent {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 780px) {
+    .prevButton {
+        left: -10px;
+        font-size: 24px;
+    }
+
+    .nextButton {
+        right: -10px;
+        font-size: 24px;
+    }
+    .slider {
+        width: 380px;
+    }
+    .sliderImg {
+        width: 190px;
+        height: 180px;
+    }
+    .slide {
+        flex: 0 0 120px;
+    }
+
+    .TitleContentTitle {
+        font-size: 24px;
+    }
+    .InfoContentTitle {
+        width: 270px;
+        font-size: 24px;
+    }
+    .InfoContentInfo {
+        width: 240px;
+        font-size: 9px;
+    }
+    .titleContent {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 730px) {
+    .prevButton {
+        left: -10px;
+        font-size: 23px;
+    }
+
+    .nextButton {
+        right: -10px;
+        font-size: 23px;
+    }
+    .slider {
+        width: 360px;
+    }
+    .sliderImg {
+        width: 180px;
+        height: 170px;
+    }
+    .slide {
+        flex: 0 0 120px;
+    }
+
+    .TitleContentTitle {
+        font-size: 22px;
+    }
+    .InfoContentTitle {
+        width: 220px;
+        font-size: 22px;
+    }
+    .InfoContentInfo {
+        width: 220px;
+        font-size: 9px;
+    }
+    .info {
+        gap: 10px;
+    }
+
+    .InfoContent {
+        gap: 15px;
+    }
+    .titleContent {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 680px) {
+    .prevButton {
+        left: -10px;
+        font-size: 21px;
+    }
+
+    .nextButton {
+        right: -10px;
+        font-size: 21px;
+    }
+    .slider {
+        width: 320px;
+    }
     .sliderImg {
         width: 160px;
         height: 150px;
     }
     .slide {
-        flex: 0 0 160px;
+        flex: 0 0 120px;
     }
-    .slider {
-        width: 320px;
-    }
-    .ImgContentImg {
-        width: 448px;
-        height: 223px;
-    }
+
     .TitleContentTitle {
-        font-size: 34px;
+        font-size: 21px;
     }
     .InfoContentTitle {
-        width: 340px;
-        font-size: 34px;
+        width: 220px;
+        font-size: 21px;
     }
     .InfoContentInfo {
-        width: 300px;
-        font-size: 16px;
+        width: 220px;
+        font-size: 9px;
+    }
+    .info {
+        gap: 10px;
+    }
+
+    .InfoContent {
+        gap: 15px;
+    }
+    .titleContent {
+        gap: 15px;
+    }
+}
+
+@media (max-width: 630px) {
+    .content {
+        display: flex;
+        gap: 30px;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+    .prevButton {
+        display: none;
+    }
+
+    .nextButton {
+        display: none;
+    }
+
+    .slider {
+        width: 600px;
+    }
+    .sliderImg {
+        width: 280px;
+        height: 280px;
+    }
+    .slide {
+        flex: 0 0 60px;
+    }
+
+    .TitleContentTitle {
+        font-size: 31px;
+    }
+    .InfoContentTitle {
+        width: 320px;
+        font-size: 31px;
+    }
+    .InfoContentInfo {
+        width: 420px;
+        font-size: 15px;
     }
 
     .sliderContainer {
         position: relative;
-        width: 448px;
+        width: 100%;
         display: flex;
-        gap: 0px;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: flex-start;
+    }
+    .info {
+        gap: 10px;
+    }
+
+    .InfoContent {
+        gap: 15px;
+    }
+    .titleContent {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 580px) {
+    .content {
+        gap: 25px;
+    }
+
+    .slider {
+        width: 560px;
+    }
+    .sliderImg {
+        width: 250px;
+        height: 250px;
+    }
+    .slide {
+        flex: 0 0 60px;
+    }
+
+    .TitleContentTitle {
+        font-size: 29px;
+    }
+    .InfoContentTitle {
+        width: 320px;
+        font-size: 29px;
+    }
+    .InfoContentInfo {
+        width: 420px;
+        font-size: 13px;
+    }
+    .info {
+        gap: 10px;
+    }
+
+    .InfoContent {
+        gap: 15px;
+    }
+    .titleContent {
+        gap: 20px;
+    }
+}
+@media (max-width: 530px) {
+    .content {
+        gap: 20px;
+    }
+
+    .slider {
+        width: 560px;
+    }
+    .sliderImg {
+        width: 230px;
+        height: 230px;
+    }
+    .slide {
+        flex: 0 0 60px;
+    }
+
+    .TitleContentTitle {
+        font-size: 27px;
+    }
+    .InfoContentTitle {
+        width: 300px;
+        font-size: 27px;
+    }
+    .InfoContentInfo {
+        width: 400px;
+        font-size: 11px;
+    }
+    .info {
+        gap: 10px;
+    }
+
+    .InfoContent {
+        gap: 15px;
+    }
+    .titleContent {
+        gap: 15px;
     }
 }
 
 @media (max-width: 480px) {
+    .content {
+        gap: 20px;
+    }
+
+    .slider {
+        width: 540px;
+    }
+    .sliderImg {
+        width: 210px;
+        height: 210px;
+    }
+    .slide {
+        flex: 0 0 60px;
+    }
+
+    .TitleContentTitle {
+        font-size: 25px;
+    }
+    .InfoContentTitle {
+        width: 280px;
+        font-size: 25px;
+    }
+    .InfoContentInfo {
+        width: 280px;
+        font-size: 9px;
+    }
     .info {
         gap: 10px;
     }
-    .titleContent {
-        gap: 12px;
-    }
-    .content {
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
-    }
-    .prevButton {
-        left: 10px;
-    }
 
-    .nextButton {
-        right: 10px;
-    }
-
-    .sliderImg {
-        width: 160px;
-        height: 150px;
-    }
-    .slide {
-        flex: 0 0 160px;
-    }
-    .slider {
-        width: 320px;
-    }
-    .ImgContentImg {
-        width: 448px;
-        height: 223px;
-    }
-    .TitleContentTitle {
-        font-size: 34px;
-    }
-    .InfoContentTitle {
-        width: 340px;
-        font-size: 34px;
-    }
-    .InfoContentInfo {
-        width: 300px;
-        font-size: 16px;
-    }
-
-    .sliderContainer {
-        position: relative;
-        width: 408px;
-        display: flex;
-        gap: 0px;
-        justify-content: center;
-        align-items: flex-start;
+    .InfoContent {
+        gap: 15px;
     }
     .titleContent {
         gap: 15px;
     }
 }
-
-@media (max-width: 450px) {
-    .prevButton {
-        left: 17px;
+@media (max-width: 430px) {
+    .content {
+        gap: 20px;
     }
 
-    .nextButton {
-        right: 17px;
+    .slider {
+        width: 540px;
     }
-
     .sliderImg {
-        width: 130px;
-        height: 120px;
+        width: 180px;
+        height: 180px;
     }
     .slide {
-        flex: 0 0 80px;
+        flex: 0 0 60px;
     }
-    .slider {
-        width: 260px;
-    }
-    .ImgContentImg {
-        width: 418px;
-        height: 193px;
-    }
+
     .TitleContentTitle {
-        font-size: 33px;
+        font-size: 23px;
     }
     .InfoContentTitle {
-        width: 320px;
-        font-size: 33px;
+        width: 280px;
+        font-size: 23px;
     }
     .InfoContentInfo {
-        width: 270px;
-        font-size: 16px;
+        width: 280px;
+        font-size: 9px;
     }
-
-    .sliderContainer {
-        position: relative;
-        width: 378px;
-        display: flex;
-        gap: 0px;
-        justify-content: center;
-        align-items: flex-start;
-    }
-    .titleContent {
-        gap: 15px;
-    }
-}
-
-@media (max-width: 400px) {
-    .content {
-        padding: 30px 0;
+    .info {
         gap: 10px;
     }
-    .prevButton {
-        left: 10px;
-    }
 
-    .nextButton {
-        right: 10px;
-    }
-
-    .sliderImg {
-        width: 130px;
-        height: 120px;
-    }
-    .slide {
-        flex: 0 0 80px;
-    }
-    .slider {
-        width: 260px;
-    }
-    .ImgContentImg {
-        width: 418px;
-        height: 193px;
-    }
-    .TitleContentTitle {
-        font-size: 28px;
-    }
-    .InfoContentTitle {
-        width: 320px;
-        font-size: 28px;
-    }
-    .InfoContentInfo {
-        width: 270px;
-        font-size: 16px;
-    }
-
-    .sliderContainer {
-        position: relative;
-        width: 348px;
-        display: flex;
-        gap: 0px;
-        justify-content: center;
-        align-items: flex-start;
+    .InfoContent {
+        gap: 15px;
     }
     .titleContent {
         gap: 15px;
     }
 }
 @media (max-width: 380px) {
-    .InfoContent {
-        gap: 12px;
-    }
-
     .content {
+        gap: 20px;
         padding: 20px 0;
-        gap: 10px;
-    }
-    .prevButton {
-        left: 20px;
     }
 
-    .nextButton {
-        right: 20px;
+    .slider {
+        width: 500px;
     }
-
     .sliderImg {
-        width: 100px;
-        height: 90px;
+        width: 160px;
+        height: 160px;
     }
     .slide {
         flex: 0 0 60px;
     }
-    .slider {
-        width: 200px;
-    }
-    .ImgContentImg {
-        width: 388px;
-        height: 163px;
-    }
+
     .TitleContentTitle {
-        font-size: 26px;
+        font-size: 23px;
     }
     .InfoContentTitle {
-        width: 290px;
-        font-size: 26px;
+        width: 240px;
+        font-size: 20px;
     }
     .InfoContentInfo {
-        width: 250px;
-        font-size: 16px;
-        margin-bottom: 20px;
+        width: 280px;
+        font-size: 9px;
+    }
+    .info {
+        gap: 10px;
     }
 
-    .sliderContainer {
-        position: relative;
-        width: 328px;
-        display: flex;
-        gap: 0px;
-        justify-content: center;
-        align-items: flex-start;
+    .InfoContent {
+        gap: 15px;
     }
     .titleContent {
-        gap: 12px;
+        gap: 15px;
     }
 }
